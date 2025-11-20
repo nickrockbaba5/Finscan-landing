@@ -442,14 +442,14 @@ export default function LandingPage() {
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -457,9 +457,9 @@ export default function LandingPage() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -471,19 +471,19 @@ export default function LandingPage() {
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                       Privacy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
                       Terms
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                      Security
-                    </a>
+                    <Link href="/disclaimer" className="text-gray-400 hover:text-white transition-colors">
+                      Disclaimer
+                    </Link>
                   </li>
                 </ul>
               </div>
