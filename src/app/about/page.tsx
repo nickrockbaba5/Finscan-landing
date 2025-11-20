@@ -79,13 +79,143 @@ export default function AboutPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">
-            Advanced Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Intelligence</span>
+            Democratizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Institutional Intelligence</span>
           </h1>
 
           <p className="text-xl text-gray-400 leading-relaxed mb-8">
-            FinScan combines cutting-edge AI, institutional-grade data, and professional market analysis tools
-            to provide traders with the intelligence previously available only to hedge funds.
+            We believe professional traders deserve the same powerful tools that hedge funds use daily. FinScan makes that vision a reality.
           </p>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="py-20 px-6 border-t border-gray-800 bg-gradient-to-b from-gray-500/5 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-500/10 border border-gray-500/20 rounded-full mb-6">
+                <Target className="w-4 h-4 text-gray-400" />
+                <span className="text-sm text-gray-400 font-medium">Our Story</span>
+              </div>
+
+              <h2 className="text-4xl font-black mb-6">Why We Built <span className="text-gray-300">FinScan</span></h2>
+
+              <div className="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                  The financial markets have always been divided. On one side, institutional investors with access to
+                  multi-million dollar Bloomberg terminals, proprietary data feeds, and teams of quantitative analysts.
+                  On the other, retail traders making decisions with basic charts and gut feelings.
+                </p>
+                <p>
+                  We asked ourselves: <span className="text-white font-semibold">Why should sophisticated market analysis be exclusive to Wall Street?</span>
+                </p>
+                <p>
+                  FinScan was born from this frustration. We combined expertise in artificial intelligence, quantitative finance,
+                  and professional trading to build something unprecedented: institutional-grade market intelligence accessible
+                  to individual traders worldwide.
+                </p>
+                <p className="text-gray-300 font-semibold">
+                  Today, FinScan processes millions of data points daily, running 9 specialized AI engines that analyze markets
+                  with the same sophistication as hedge fund analysts—but at a fraction of the cost.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-gray-500/10 to-transparent border border-gray-500/20 rounded-2xl p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Brain className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">Founded 2024</h3>
+                    <p className="text-sm text-gray-400">
+                      Built by traders and AI engineers who understood both the markets and the technology needed to analyze them.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-gray-500/10 to-transparent border border-gray-500/20 rounded-2xl p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">Professional Traders Worldwide</h3>
+                    <p className="text-sm text-gray-400">
+                      From London to Singapore, professional traders rely on FinScan for real-time market intelligence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-gray-500/10 to-transparent border border-gray-500/20 rounded-2xl p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">Millions of Analyses Daily</h3>
+                    <p className="text-sm text-gray-400">
+                      Our engines process vast amounts of market data 24/7, identifying opportunities as they emerge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-20 px-6 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-500/10 border border-gray-500/20 rounded-full mb-6">
+            <Globe className="w-4 h-4 text-gray-400" />
+            <span className="text-sm text-gray-400 font-medium">Our Vision</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-black mb-8">
+            The Future of <span className="text-gray-300">Market Intelligence</span>
+          </h2>
+
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+            We envision a world where every professional trader has access to the same level of market intelligence as the largest hedge funds.
+            Where decisions are data-driven, not emotional. Where success is determined by skill and access to information, not by the size of your brokerage account.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
+              <div className="w-14 h-14 bg-gradient-to-br from-gray-300 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Analysis</h3>
+              <p className="text-gray-400 text-sm">
+                Continuously evolving artificial intelligence that learns from market patterns and adapts to changing conditions.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
+              <div className="w-14 h-14 bg-gradient-to-br from-gray-300 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Global Accessibility</h3>
+              <p className="text-gray-400 text-sm">
+                Professional-grade tools available to traders worldwide, breaking down geographical and financial barriers.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
+              <div className="w-14 h-14 bg-gradient-to-br from-gray-300 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Transparent & Reliable</h3>
+              <p className="text-gray-400 text-sm">
+                Every signal backed by data, every analysis explained. No black boxes, no hidden algorithms.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
