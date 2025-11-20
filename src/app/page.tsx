@@ -242,7 +242,7 @@ export default function LandingPage() {
                 {
                   icon: Brain,
                   title: 'Multi-Engine Analysis',
-                  desc: 'Consensus-driven intelligence from 18 specialized models analyzing regime detection, flow dynamics, correlation patterns, and market microstructure across global markets.',
+                  desc: 'Consensus-driven intelligence from 9 specialized engines analyzing regime detection, flow dynamics, correlation patterns, and market microstructure across global markets.',
                   tags: ['Regime Detection', 'Flow Analytics', 'Correlation']
                 },
                 {
