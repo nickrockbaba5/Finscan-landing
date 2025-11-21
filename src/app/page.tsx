@@ -470,6 +470,100 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* PRODUCT DEMO SECTION */}
+        <section id="live-preview" className="py-40 px-6 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.03] border border-gray-800 rounded-full mb-8 backdrop-blur-xl">
+                <Play className="w-4 h-4 text-gray-300" />
+                <span className="text-sm font-semibold text-gray-300">
+                  See It In Action
+                </span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-white">
+                Terminal Walkthrough
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light">
+                Watch how professional traders use FinScan for institutional-grade analysis
+              </p>
+            </div>
+
+            {/* Main demo video/screenshot */}
+            <div className="mb-16">
+              <div className="relative aspect-video rounded-3xl overflow-hidden border border-gray-800 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+                {/* Video placeholder */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform cursor-pointer">
+                      <Play className="w-12 h-12 text-black ml-1" />
+                    </div>
+                    <p className="text-2xl font-bold text-white mb-2">Watch Platform Demo</p>
+                    <p className="text-gray-400">5-minute walkthrough of all features</p>
+                  </div>
+                </div>
+
+                {/* Gradient overlay for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+              </div>
+            </div>
+
+            {/* Feature screenshots carousel */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Institutional Analysis',
+                  desc: 'ICT structure, gamma walls, liquidity maps',
+                  icon: TrendingUp,
+                  gradient: 'from-blue-500/20 to-purple-500/20'
+                },
+                {
+                  title: 'Company Fundamentals',
+                  desc: 'Financial statements, ratios, valuations',
+                  icon: Building2,
+                  gradient: 'from-emerald-500/20 to-teal-500/20'
+                },
+                {
+                  title: 'AI Research Copilot',
+                  desc: 'Generate reports, explain concepts',
+                  icon: MessageSquare,
+                  gradient: 'from-amber-500/20 to-orange-500/20'
+                }
+              ].map((item, i) => (
+                <div key={i} className="group cursor-pointer">
+                  <div className={`relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-gradient-to-br ${item.gradient} hover:border-gray-600 transition-all duration-500`}>
+                    {/* Screenshot placeholder */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <item.icon className="w-16 h-16 text-gray-600 group-hover:scale-110 transition-transform" />
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                      <p className="text-sm font-bold text-white">{item.title}</p>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-400 text-center">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Key highlights */}
+            <div className="mt-16 grid md:grid-cols-4 gap-6">
+              {[
+                { icon: Zap, title: 'Real-Time', desc: '<100ms latency' },
+                { icon: Brain, title: '18 AI Engines', desc: 'Multi-model consensus' },
+                { icon: Shield, title: 'FCA Compliant', desc: 'UK research platform' },
+                { icon: Activity, title: '24/7 Monitoring', desc: 'Global market coverage' }
+              ].map((item, i) => (
+                <div key={i} className="text-center p-6 bg-white/[0.02] border border-gray-800 rounded-2xl hover:bg-white/[0.04] transition-all">
+                  <item.icon className="w-8 h-8 text-gray-300 mx-auto mb-4" />
+                  <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Endorsement narrative */}
         <section className="py-40 px-6">
           <div className="max-w-5xl mx-auto">
