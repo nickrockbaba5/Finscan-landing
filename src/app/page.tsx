@@ -411,7 +411,7 @@ export default function LandingPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {[
+                  {([
                     { feature: 'Sniper Engine (ICT)', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: 'ICT + Liquidity Maps', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: 'Gamma + Open Interest', finscan: true, tv: false, fiscal: false, alpha: false },
@@ -422,7 +422,7 @@ export default function LandingPage() {
                     { feature: 'Unified Terminal (All-in-One)', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: '18 AI Engines', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: 'Multi-Timeframe Analysis', finscan: true, tv: 'partial', fiscal: false, alpha: false }
-                  ].map((row, i) => (
+                  ] as Array<{feature: string; finscan: boolean | string; tv: boolean | string; fiscal: boolean | string; alpha: boolean | string}>).map((row, i) => (
                     <tr key={i} className="border-b border-gray-900 hover:bg-white/[0.02] transition-colors">
                       <td className="p-6 text-gray-300 font-medium">{row.feature}</td>
                       <td className="p-6 text-center">
