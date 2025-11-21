@@ -152,27 +152,27 @@ export default function LandingPage() {
               </span>
             </div>
 
-            {/* Main headline - Mobile optimized */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-6 leading-[0.9] tracking-tight">
+            {/* Main headline - Mobile first */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight tracking-tight">
               <span className="block text-white">
                 FinScan Terminal
               </span>
             </h1>
 
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-gray-300 tracking-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-gray-300 tracking-tight">
               Institutional Trading + Fundamentals + AI Copilot
             </p>
 
-            {/* Subheadline - Mobile optimized */}
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400 max-w-5xl mx-auto mb-14 leading-relaxed font-light">
-              One platform powered by <span className="text-white font-semibold">9 AI engines</span>, comprehensive fundamentals, and <span className="text-gray-300 font-semibold">real-time liquidity intelligence</span>.
+            {/* Subheadline - Compact for mobile */}
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+              One platform powered by <span className="text-white font-semibold">9 AI engines</span>, comprehensive fundamentals, and real-time liquidity intelligence.
             </p>
 
-            {/* CTAs - Silver style */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
+            {/* CTAs - Mobile optimized */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <Link
                 href="https://app.finscan.uk/register"
-                className="group relative px-10 py-5 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-2xl font-bold text-xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-[0_0_80px_rgba(192,192,192,0.6)] flex items-center gap-3"
+                className="group relative px-8 py-4 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(192,192,192,0.5)] flex items-center gap-2"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative">Launch Terminal</span>
@@ -227,24 +227,24 @@ export default function LandingPage() {
             </div>
 
             {/* Module 1: Institutional Trade Intelligence */}
-            <div className="mb-32 group">
-              <div className="p-12 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-[3rem] backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <TrendingUp className="w-8 h-8 text-white" />
+            <div className="mb-16 sm:mb-24 group">
+              <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-2xl sm:rounded-3xl backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-4xl font-black text-white mb-2">Institutional Trade Intelligence</h3>
-                    <p className="text-gray-400">The world's first retail-accessible institutional trading engine</p>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">Institutional Trade Intelligence</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Retail-accessible institutional trading engine</p>
                   </div>
                 </div>
 
                 {/* Screenshot placeholder */}
-                <div className="mb-8 h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center">
-                    <LineChart className="w-20 h-20 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">Terminal Screenshot Here</p>
-                    <p className="text-gray-600 text-sm">ICT Structure + Gamma + Liquidity Maps</p>
+                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
+                  <div className="text-center px-4">
+                    <LineChart className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
+                    <p className="text-gray-500 text-sm sm:text-base">Terminal Screenshot Here</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">ICT Structure + Gamma + Liquidity Maps</p>
                   </div>
                 </div>
 
@@ -283,24 +283,24 @@ export default function LandingPage() {
             </div>
 
             {/* Module 2: Company Fundamentals Terminal */}
-            <div className="mb-32 group">
-              <div className="p-12 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-[3rem] backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center">
-                    <Building2 className="w-8 h-8 text-white" />
+            <div className="mb-16 sm:mb-24 group">
+              <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-2xl sm:rounded-3xl backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Building2 className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-4xl font-black text-white mb-2">Company Fundamentals Terminal</h3>
-                    <p className="text-gray-400">Institutional-grade fundamental analysis with global market coverage</p>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">Company Fundamentals Terminal</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Institutional-grade fundamental analysis</p>
                   </div>
                 </div>
 
                 {/* Screenshot placeholder */}
-                <div className="mb-8 h-80 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center">
-                    <FileText className="w-20 h-20 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">Fundamentals Page Screenshot</p>
-                    <p className="text-gray-600 text-sm">Financial Statements + Key Metrics + Ratios</p>
+                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
+                  <div className="text-center px-4">
+                    <FileText className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
+                    <p className="text-gray-500 text-sm sm:text-base">Fundamentals Page Screenshot</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">Financial Statements + Key Metrics + Ratios</p>
                   </div>
                 </div>
 
@@ -335,23 +335,23 @@ export default function LandingPage() {
 
             {/* Module 3: AI Research Copilot */}
             <div className="group">
-              <div className="p-12 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-[3rem] backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center">
-                    <MessageSquare className="w-8 h-8 text-white" />
+              <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-2xl sm:rounded-3xl backdrop-blur-2xl hover:border-gray-600 transition-all duration-500">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-4xl font-black text-white mb-2">AI Research Copilot</h3>
-                    <p className="text-gray-400">Ask anything. Get institutional-grade answers.</p>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">AI Research Copilot</h3>
+                    <p className="text-sm sm:text-base text-gray-400">Ask anything. Get institutional-grade answers.</p>
                   </div>
                 </div>
 
                 {/* Screenshot placeholder */}
-                <div className="mb-8 h-80 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center">
-                    <MessageSquare className="w-20 h-20 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">AI Chat Interface Screenshot</p>
-                    <p className="text-gray-600 text-sm">Research Engine + Context-Aware Analysis</p>
+                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
+                  <div className="text-center px-4">
+                    <MessageSquare className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
+                    <p className="text-gray-500 text-sm sm:text-base">AI Chat Interface Screenshot</p>
+                    <p className="text-gray-600 text-xs sm:text-sm">Research Engine + Context-Aware Analysis</p>
                   </div>
                 </div>
 
