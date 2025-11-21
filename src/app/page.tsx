@@ -13,7 +13,7 @@ export default function LandingPage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [liveStats, setLiveStats] = useState({
     analyses: 127543,
-    engines: 18, // Updated from 9 to 18
+    engines: 9,
     accuracy: 94.2,
     uptime: 99.9
   });
@@ -165,7 +165,7 @@ export default function LandingPage() {
 
             {/* Subheadline - Mobile optimized */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400 max-w-5xl mx-auto mb-14 leading-relaxed font-light">
-              One platform powered by <span className="text-white font-semibold">18 AI engines</span>, FMP fundamentals, and <span className="text-gray-300 font-semibold">real-time liquidity intelligence</span>.
+              One platform powered by <span className="text-white font-semibold">9 AI engines</span>, FMP fundamentals, and <span className="text-gray-300 font-semibold">real-time liquidity intelligence</span>.
             </p>
 
             {/* CTAs - Silver style */}
@@ -420,7 +420,7 @@ export default function LandingPage() {
                     { feature: 'AI Copilot (GPT-4)', finscan: true, tv: false, fiscal: true, alpha: true },
                     { feature: 'Macro Regime Detection', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: 'Unified Terminal (All-in-One)', finscan: true, tv: false, fiscal: false, alpha: false },
-                    { feature: '18 AI Engines', finscan: true, tv: false, fiscal: false, alpha: false },
+                    { feature: '9 AI Engines', finscan: true, tv: false, fiscal: false, alpha: false },
                     { feature: 'Multi-Timeframe Analysis', finscan: true, tv: 'partial', fiscal: false, alpha: false }
                   ] as Array<{feature: string; finscan: boolean | string; tv: boolean | string; fiscal: boolean | string; alpha: boolean | string}>).map((row, i) => (
                     <tr key={i} className="border-b border-gray-900 hover:bg-white/[0.02] transition-colors">
@@ -663,7 +663,7 @@ export default function LandingPage() {
             <div className="mt-16 grid md:grid-cols-4 gap-6">
               {[
                 { icon: Zap, title: 'Real-Time', desc: '<100ms latency' },
-                { icon: Brain, title: '18 AI Engines', desc: 'Multi-model consensus' },
+                { icon: Brain, title: '9 AI Engines', desc: 'Multi-model consensus' },
                 { icon: Shield, title: 'FCA Compliant', desc: 'UK research platform' },
                 { icon: Activity, title: '24/7 Monitoring', desc: 'Global market coverage' }
               ].map((item, i) => (
@@ -689,7 +689,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 { icon: Globe, title: 'UK-Based', desc: 'Headquartered in the UK with full FCA compliance. Research platform designed for global professional traders.' },
-                { icon: Brain, title: 'AI-First Fintech', desc: '18 specialized AI engines working in parallel. Multi-engine architecture for maximum accuracy and confidence.' },
+                { icon: Brain, title: 'AI-First Fintech', desc: '9 specialized AI engines working in parallel. Multi-engine architecture for maximum accuracy and confidence.' },
                 { icon: Shield, title: 'Institutional-Grade', desc: 'Built to standards used by trading firms. Enterprise reliability (99.9% uptime), real-time processing (<100ms latency).' },
                 { icon: Building2, title: 'Global Coverage', desc: 'Multi-asset support (equities, forex, metals, crypto). 30,000+ companies, 20+ data sources, worldwide market coverage.' }
               ].map((item, i) => (
@@ -802,7 +802,7 @@ export default function LandingPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-white font-semibold">All 18 AI engines</span>
+                    <span className="text-sm text-white font-semibold">All 9 AI engines</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -930,7 +930,7 @@ export default function LandingPage() {
                   </span>
                 </div>
                 <p className="text-sm text-gray-400">
-                  Institutional-grade financial analysis platform powered by 18 AI engines.
+                  Institutional-grade financial analysis platform powered by 9 AI engines.
                 </p>
               </div>
 
