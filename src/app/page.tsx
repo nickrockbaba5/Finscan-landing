@@ -148,7 +148,7 @@ export default function LandingPage() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
               </div>
               <span className="text-sm font-semibold text-gray-300">
-                UK-Based • Institutional Grade • Live at api.finscan.uk
+                UK-Based • Institutional Grade • Live at finscan.uk
               </span>
             </div>
 
@@ -1020,7 +1020,7 @@ export default function LandingPage() {
             <div className="pt-8 border-t border-gray-900">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
                 <p>© {new Date().getFullYear()} FinScan. All rights reserved.</p>
-                <p>UK-Based • Institutional Intelligence Platform • api.finscan.uk</p>
+                <p>UK-Based • Institutional Intelligence Platform • finscan.uk</p>
               </div>
             </div>
           </div>
