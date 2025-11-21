@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   // Basic Meta
@@ -230,7 +231,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased"><ThemeProviderWrapper>{children}</ThemeProviderWrapper></body>
+      <body className="antialiased"><Providers>{children}</Providers></body>
     </html>
   );
 }

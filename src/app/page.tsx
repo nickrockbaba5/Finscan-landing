@@ -106,7 +106,8 @@ export default function LandingPage() {
 
               {/* Nav */}
               <nav className="hidden md:flex items-center gap-8">
-                <a href="#features" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Features</a>
+                <Link href="/screener" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Screener</Link>
+                <Link href="/research/AAPL" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Research</Link>
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
                 <a href="#comparison" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Compare</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
