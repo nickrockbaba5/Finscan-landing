@@ -37,9 +37,11 @@ export default function PrivacyPage() {
 
           <div className="bg-gradient-to-br from-gray-500/10 to-transparent border border-gray-500/20 rounded-xl p-6 mb-8">
             <p className="text-sm text-gray-300 leading-relaxed">
-              <strong>Last Updated:</strong> 20 January 2025<br />
-              <strong>Effective Date:</strong> 20 January 2025<br />
-              <strong>Data Controller:</strong> FinScan Limited<br />
+              <strong>Last Updated:</strong> 25 November 2025<br />
+              <strong>Effective Date:</strong> 25 November 2025<br />
+              <strong>Data Controller:</strong> Eagle Digital Services Ltd<br />
+              <strong>Company Number:</strong> 16584009<br />
+              <strong>Registered Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br />
               <strong>Contact:</strong> privacy@finscan.uk
             </p>
           </div>
@@ -52,13 +54,13 @@ export default function PrivacyPage() {
                 1. Introduction
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                FinScan Limited ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
+                Eagle Digital Services Ltd ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), trading as FinScan, is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 This policy is issued in accordance with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).
               </p>
               <p className="text-gray-300 leading-relaxed">
-                FinScan Limited is the data controller responsible for your personal data. We are registered with the Information Commissioner's Office (ICO) in the United Kingdom.
+                Eagle Digital Services Ltd (Company No. 16584009) is the data controller responsible for your personal data. We are registered with the Information Commissioner's Office (ICO) in the United Kingdom.
               </p>
             </section>
 
@@ -344,10 +346,20 @@ export default function PrivacyPage() {
                   If you have questions, concerns, or requests regarding this Privacy Policy or our data practices:
                 </p>
                 <div className="space-y-2 text-gray-300">
-                  <p><strong className="text-white">Data Protection Officer:</strong> FinScan Limited</p>
+                  <p><strong className="text-white">Data Controller:</strong> Eagle Digital Services Ltd</p>
+                  <p><strong className="text-white">Company Number:</strong> 16584009</p>
                   <p><strong className="text-white">Email:</strong> <a href="mailto:privacy@finscan.uk" className="text-gray-200 underline hover:text-white">privacy@finscan.uk</a></p>
-                  <p><strong className="text-white">Address:</strong> FinScan Limited, United Kingdom</p>
-                  <p><strong className="text-white">ICO Registration:</strong> [Registration Number]</p>
+                  <p><strong className="text-white">Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
+                  <p className="pt-2">
+                    <a
+                      href="https://find-and-update.company-information.service.gov.uk/company/16584009"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white underline text-sm"
+                    >
+                      View on Companies House →
+                    </a>
+                  </p>
                 </div>
               </div>
             </section>
@@ -357,8 +369,9 @@ export default function PrivacyPage() {
 
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan Limited. All rights reserved. Registered in England and Wales.</p>
+          <div className="text-center text-sm text-gray-500 space-y-2">
+            <p>© {new Date().getFullYear()} Eagle Digital Services Ltd. All rights reserved.</p>
+            <p className="text-xs">Company No. 16584009 • Registered in England & Wales</p>
           </div>
         </div>
       </footer>

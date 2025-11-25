@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   ],
 
   // Authors and Creator
-  authors: [{ name: "FinScan Limited" }],
-  creator: "FinScan Limited",
-  publisher: "FinScan Limited",
+  authors: [{ name: "Eagle Digital Services Ltd" }],
+  creator: "Eagle Digital Services Ltd",
+  publisher: "Eagle Digital Services Ltd",
 
   // OpenGraph (for social sharing - Facebook, LinkedIn, etc.)
   openGraph: {
@@ -141,10 +141,19 @@ export default function RootLayout({
               },
               "creator": {
                 "@type": "Organization",
-                "name": "FinScan Limited",
+                "name": "Eagle Digital Services Ltd",
                 "url": "https://finscan.uk",
                 "logo": "https://finscan.uk/logo.png",
+                "description": "UK-based technology company specializing in AI-powered financial intelligence platforms",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "71-75 Shelton Street",
+                  "addressLocality": "Covent Garden, London",
+                  "postalCode": "WC2H 9JQ",
+                  "addressCountry": "GB"
+                },
                 "sameAs": [
+                  "https://find-and-update.company-information.service.gov.uk/company/16584009",
                   "https://twitter.com/finscan",
                   "https://linkedin.com/company/finscan"
                 ]
@@ -172,21 +181,20 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "FinScan Limited",
-              "legalName": "FinScan Limited",
+              "name": "Eagle Digital Services Ltd",
+              "legalName": "Eagle Digital Services Ltd",
               "url": "https://finscan.uk",
               "logo": "https://finscan.uk/logo.png",
-              "foundingDate": "2024",
-              "founders": [
-                {
-                  "@type": "Organization",
-                  "name": "FinScan Limited"
-                }
-              ],
+              "foundingDate": "2025",
+              "description": "UK-based technology company specializing in AI-powered financial intelligence platforms. Creator of FinScan Terminal.",
+              "taxID": "16584009",
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "GB",
-                "addressRegion": "England"
+                "streetAddress": "71-75 Shelton Street",
+                "addressLocality": "Covent Garden",
+                "addressRegion": "London",
+                "postalCode": "WC2H 9JQ",
+                "addressCountry": "GB"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -195,9 +203,15 @@ export default function RootLayout({
                 "availableLanguage": ["English"]
               },
               "sameAs": [
+                "https://find-and-update.company-information.service.gov.uk/company/16584009",
                 "https://twitter.com/finscan",
                 "https://linkedin.com/company/finscan"
-              ]
+              ],
+              "brand": {
+                "@type": "Brand",
+                "name": "FinScan",
+                "description": "Institutional-grade financial intelligence platform"
+              }
             })
           }}
         />

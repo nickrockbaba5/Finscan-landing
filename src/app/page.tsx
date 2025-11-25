@@ -90,8 +90,8 @@ export default function LandingPage() {
       <div className="relative z-10">
         {/* Premium Header - Apple style */}
         <header className="fixed top-0 w-full z-50 backdrop-blur-2xl bg-black/60 border-b border-gray-800">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div className="flex items-center justify-between gap-3">
               {/* Logo */}
               <div className="flex items-center gap-3">
                 <div className="relative w-9 h-9 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl p-[1px] shadow-lg shadow-gray-500/50">
@@ -142,7 +142,22 @@ export default function LandingPage() {
           ))}
 
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            {/* Badge */}
+            {/* Company Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800/50 rounded-full mb-4 backdrop-blur-xl">
+              <span className="text-xs text-gray-500">
+                A product of{' '}
+                <a
+                  href="https://find-and-update.company-information.service.gov.uk/company/16584009"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors underline"
+                >
+                  Eagle Digital Services Ltd
+                </a>
+              </span>
+            </div>
+
+            {/* Live Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.03] border border-gray-800 rounded-full mb-10 backdrop-blur-xl hover:bg-white/[0.05] transition-all duration-300">
               <div className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-75"></span>
@@ -170,7 +185,7 @@ export default function LandingPage() {
             </p>
 
             {/* CTAs - Mobile optimized */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-16">
               <Link
                 href="https://app.finscan.uk/register"
                 className="group relative px-8 py-4 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(192,192,192,0.5)] flex items-center gap-2"
@@ -190,7 +205,7 @@ export default function LandingPage() {
             </div>
 
             {/* Live stats - Silver cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {[
                 { value: liveStats.analyses.toLocaleString(), label: 'Analyses Generated', icon: Activity },
                 { value: `${liveStats.engines} AI`, label: 'Engines Active', icon: Cpu },
@@ -717,10 +732,10 @@ export default function LandingPage() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-40 px-6 relative">
+        <section id="pricing" className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
 
-          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-24">
               <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.03] border border-gray-800 rounded-full mb-8 backdrop-blur-xl">
                 <span className="text-sm font-semibold text-gray-300">
@@ -883,9 +898,9 @@ export default function LandingPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-40 px-6">
+        <section className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="relative p-16 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-[3rem] backdrop-blur-2xl overflow-hidden group hover:border-gray-600 transition-all duration-500">
+            <div className="relative p-8 sm:p-12 lg:p-16 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-white/[0.05] border border-gray-800 rounded-3xl lg:rounded-[3rem] backdrop-blur-2xl overflow-hidden group hover:border-gray-600 transition-all duration-500">
               {/* Animated gradient overlay */}
               <div className="absolute inset-0 bg-gray-400/0 group-hover:bg-gray-400/5 transition-opacity duration-500" />
 
@@ -930,8 +945,11 @@ export default function LandingPage() {
                     FIN<span className="text-gray-300">SCAN</span>
                   </span>
                 </div>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-400 mb-3">
                   Institutional-grade financial analysis platform powered by 9 AI engines.
+                </p>
+                <p className="text-xs text-gray-500">
+                  A product of Eagle Digital Services Ltd
                 </p>
               </div>
 
@@ -1018,10 +1036,35 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="pt-8 border-t border-gray-900">
+            {/* Company Registration Info */}
+            <div className="pt-8 border-t border-gray-900 mb-6">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs text-gray-600">
+                <p>Eagle Digital Services Ltd</p>
+                <span className="hidden sm:inline">•</span>
+                <p>Company No. 16584009</p>
+                <span className="hidden sm:inline">•</span>
+                <p>Registered in England & Wales</p>
+              </div>
+              <p className="text-center text-xs text-gray-600 mt-2">
+                71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
+              </p>
+            </div>
+
+            <div className="pt-6 border-t border-gray-900">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-                <p>© {new Date().getFullYear()} FinScan. All rights reserved.</p>
-                <p>UK-Based • Institutional Intelligence Platform • finscan.uk</p>
+                <p>© {new Date().getFullYear()} Eagle Digital Services Ltd. All rights reserved.</p>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://find-and-update.company-information.service.gov.uk/company/16584009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-300 transition-colors text-xs underline"
+                  >
+                    Companies House
+                  </a>
+                  <span>•</span>
+                  <span className="text-xs">finscan.uk</span>
+                </div>
               </div>
             </div>
           </div>
