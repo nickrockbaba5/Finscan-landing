@@ -1,14 +1,10 @@
-# FinScan Landing Page
+# SniperIQ Landing Page
 
-Simple Next.js landing page for finscan.uk that links to the main app at app.finscan.uk
+Next.js landing page for sniperiq.ai
 
-## Deploy to Coolify
+## Deploy
 
-1. Push this repo to GitHub
-2. In Coolify, add new resource
-3. Connect this GitHub repo
-4. Set domain to `finscan.uk`
-5. Deploy!
+Push to GitHub and deploy via Coolify with domain `sniperiq.ai`
 
 ## Local Development
 
