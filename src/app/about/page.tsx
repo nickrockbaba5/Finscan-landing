@@ -50,7 +50,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <span className="text-xl font-black">
-                FIN<span className="text-gray-300">SCAN</span>
+                SNIPER<span className="text-gray-300">IQ</span>
               </span>
             </Link>
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-xl text-gray-400 leading-relaxed mb-8">
-            We believe professional traders deserve the same powerful tools that hedge funds use daily. FinScan makes that vision a reality.
+            We believe professional traders deserve the same powerful tools that hedge funds use daily. SniperIQ makes that vision a reality.
           </p>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 <span className="text-sm text-gray-400 font-medium">Our Story</span>
               </div>
 
-              <h2 className="text-4xl font-black mb-6">Why We Built <span className="text-gray-300">FinScan</span></h2>
+              <h2 className="text-4xl font-black mb-6">Why We Built <span className="text-gray-300">SniperIQ</span></h2>
 
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
@@ -110,12 +110,12 @@ export default function AboutPage() {
                   We asked ourselves: <span className="text-white font-semibold">Why should sophisticated market analysis be exclusive to Wall Street?</span>
                 </p>
                 <p>
-                  FinScan was born from this frustration. We combined expertise in artificial intelligence, quantitative finance,
+                  SniperIQ was born from this frustration. We combined expertise in artificial intelligence, quantitative finance,
                   and professional trading to build something unprecedented: institutional-grade market intelligence accessible
                   to individual traders worldwide.
                 </p>
                 <p className="text-gray-300 font-semibold">
-                  Today, FinScan processes millions of data points daily, running 9 specialized AI engines that analyze markets
+                  Today, SniperIQ processes millions of data points daily, running 9 specialized AI engines that analyze markets
                   with the same sophistication as hedge fund analysts—but at a fraction of the cost.
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Professional Traders Worldwide</h3>
                     <p className="text-sm text-gray-400">
-                      From London to Singapore, professional traders rely on FinScan for real-time market intelligence.
+                      From London to Singapore, professional traders rely on SniperIQ for real-time market intelligence.
                     </p>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ export default function AboutPage() {
               <h2 className="text-4xl font-black mb-6">Our <span className="text-gray-300">Mission</span></h2>
               <p className="text-gray-400 leading-relaxed mb-4">
                 We believe that institutional-grade financial analysis should be accessible to professional traders
-                worldwide. FinScan democratizes advanced market intelligence by combining artificial intelligence,
+                worldwide. SniperIQ democratizes advanced market intelligence by combining artificial intelligence,
                 real-time data feeds, and professional analytical tools into a unified platform.
               </p>
               <p className="text-gray-400 leading-relaxed mb-6">
@@ -360,10 +360,10 @@ export default function AboutPage() {
             Ready to Trade with <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Institutional Intelligence</span>?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join professional traders worldwide using FinScan for advanced market analysis.
+            Join professional traders worldwide using SniperIQ for advanced market analysis.
           </p>
           <Link
-            href="https://app.finscan.uk"
+            href="https://app.sniperiq.ai"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-300 to-gray-500 text-black rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-gray-500/50 transition-all"
           >
             <span>Launch Research Terminal</span>
@@ -376,7 +376,7 @@ export default function AboutPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
             <p className="mt-2">
               <span className="text-amber-500 font-semibold">Risk Warning:</span> Trading involves significant risk. Past performance is not indicative of future results.
             </p>

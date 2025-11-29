@@ -31,7 +31,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <span className="text-xl font-black">
-                FIN<span className="text-gray-300">SCAN</span>
+                SNIPER<span className="text-gray-300">IQ</span>
               </span>
             </Link>
 
@@ -76,8 +76,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold mb-1">Email</h3>
-                    <a href="mailto:contact@finscan.uk" className="text-gray-400 hover:text-white transition-colors">
-                      contact@finscan.uk
+                    <a href="mailto:contact@sniperiq.ai" className="text-gray-400 hover:text-white transition-colors">
+                      contact@sniperiq.ai
                     </a>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function ContactPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
           </div>
         </div>
       </footer>

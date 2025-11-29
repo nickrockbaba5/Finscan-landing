@@ -100,14 +100,14 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <span className="text-xl font-black tracking-tight">
-                  FIN<span className="text-gray-300">SCAN</span>
+                  SNIPER<span className="text-gray-300">IQ</span>
                 </span>
               </div>
 
               {/* Nav */}
               <nav className="hidden md:flex items-center gap-8">
-                <Link href="/screener" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Screener</Link>
-                <Link href="/research/AAPL" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Research</Link>
+                <Link href="/pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</Link>
+                <a href="https://app.sniperiq.ai" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Terminal</a>
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
                 <a href="#comparison" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Compare</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
@@ -115,7 +115,7 @@ export default function LandingPage() {
 
               {/* CTA */}
               <Link
-                href="https://app.finscan.uk/register"
+                href="https://app.sniperiq.ai/register"
                 className="group relative px-6 py-2.5 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-xl font-bold text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -142,20 +142,6 @@ export default function LandingPage() {
           ))}
 
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            {/* Company Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800/50 rounded-full mb-4 backdrop-blur-xl">
-              <span className="text-xs text-gray-500">
-                A product of{' '}
-                <a
-                  href="https://find-and-update.company-information.service.gov.uk/company/16584009"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors underline"
-                >
-                  Eagle Digital Services Ltd
-                </a>
-              </span>
-            </div>
 
             {/* Live Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.03] border border-gray-800 rounded-full mb-10 backdrop-blur-xl hover:bg-white/[0.05] transition-all duration-300">
@@ -164,14 +150,14 @@ export default function LandingPage() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
               </div>
               <span className="text-sm font-semibold text-gray-300">
-                UK-Based • Institutional Grade • Live at finscan.uk
+                UK-Based • Institutional Grade • Live at sniperiq.ai
               </span>
             </div>
 
             {/* Main headline - Mobile first */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight tracking-tight">
               <span className="block text-white">
-                FinScan Terminal
+                SniperIQ Terminal
               </span>
             </h1>
 
@@ -187,7 +173,7 @@ export default function LandingPage() {
             {/* CTAs - Mobile optimized */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-16">
               <Link
-                href="https://app.finscan.uk/register"
+                href="https://app.sniperiq.ai/register"
                 className="group relative px-8 py-4 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(192,192,192,0.5)] flex items-center gap-2"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -407,7 +393,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-white">
-                How FinScan Compares
+                How SniperIQ Compares
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light">
                 The only platform combining institutional trading intelligence, fundamentals, and AI in one terminal.
@@ -420,7 +406,7 @@ export default function LandingPage() {
                 <thead>
                   <tr className="border-b-2 border-gray-800">
                     <th className="text-left p-6 text-gray-400 font-bold uppercase tracking-wide text-sm">Feature</th>
-                    <th className="text-center p-6 text-white font-black text-lg">FinScan</th>
+                    <th className="text-center p-6 text-white font-black text-lg">SniperIQ</th>
                     <th className="text-center p-6 text-gray-400 font-medium text-sm">TradingView</th>
                     <th className="text-center p-6 text-gray-400 font-medium text-sm">Fiscal.ai</th>
                     <th className="text-center p-6 text-gray-400 font-medium text-sm">AlphaResearch</th>
@@ -476,7 +462,7 @@ export default function LandingPage() {
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-black text-white mb-2">The Unified Institutional Terminal</h3>
                   <p className="text-gray-400">
-                    FinScan is the <span className="text-white font-semibold">only platform</span> that combines institutional trading intelligence (ICT, gamma, liquidity),
+                    SniperIQ is the <span className="text-white font-semibold">only platform</span> that combines institutional trading intelligence (ICT, gamma, liquidity),
                     company fundamentals (Fiscal.ai-level), and AI research copilot in a single, integrated terminal.
                     Stop switching between 5 different tools.
                   </p>
@@ -502,7 +488,7 @@ export default function LandingPage() {
                 Terminal Walkthrough
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light">
-                Watch how professional traders use FinScan for institutional-grade analysis
+                Watch how professional traders use SniperIQ for institutional-grade analysis
               </p>
             </div>
 
@@ -724,7 +710,7 @@ export default function LandingPage() {
               <Lightbulb className="w-12 h-12 text-amber-400 mx-auto mb-6" />
               <h3 className="text-3xl font-black text-white mb-4">Innovation at the Core</h3>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                We're not just another chart platform. FinScan is a <span className="text-white font-semibold">complete institutional research terminal</span> designed
+                We're not just another chart platform. SniperIQ is a <span className="text-white font-semibold">complete institutional research terminal</span> designed
                 from the ground up to give retail traders the same edge that hedge funds and prop firms have been using for years.
               </p>
             </div>
@@ -785,7 +771,7 @@ export default function LandingPage() {
                 </ul>
 
                 <Link
-                  href="https://app.finscan.uk/register"
+                  href="https://app.sniperiq.ai/register"
                   className="block w-full py-4 bg-white/[0.05] hover:bg-white/[0.1] border border-gray-700 hover:border-gray-600 rounded-xl font-bold text-center transition-all duration-300"
                 >
                   Get Started
@@ -835,7 +821,7 @@ export default function LandingPage() {
                 </ul>
 
                 <Link
-                  href="https://app.finscan.uk/register"
+                  href="https://app.sniperiq.ai/register"
                   className="block w-full py-4 bg-gradient-to-r from-gray-200 to-gray-400 hover:from-gray-100 hover:to-gray-300 text-black rounded-xl font-black text-center transition-all duration-300 shadow-lg shadow-gray-500/30"
                 >
                   Start Free Trial
@@ -880,7 +866,7 @@ export default function LandingPage() {
                 </ul>
 
                 <Link
-                  href="https://app.finscan.uk/register"
+                  href="https://app.sniperiq.ai/register"
                   className="block w-full py-4 bg-white/[0.05] hover:bg-white/[0.1] border border-gray-700 hover:border-gray-600 rounded-xl font-bold text-center transition-all duration-300"
                 >
                   Contact Sales
@@ -912,11 +898,11 @@ export default function LandingPage() {
                 </h2>
 
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto font-light">
-                  Join professional traders using FinScan Terminal for institutional-grade intelligence.
+                  Join professional traders using SniperIQ Terminal for institutional-grade intelligence.
                 </p>
 
                 <Link
-                  href="https://app.finscan.uk/register"
+                  href="https://app.sniperiq.ai/register"
                   className="group inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-2xl font-bold text-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_100px_rgba(192,192,192,0.6)]"
                 >
                   <span>Launch Terminal</span>
@@ -942,14 +928,14 @@ export default function LandingPage() {
                     </div>
                   </div>
                   <span className="text-xl font-black">
-                    FIN<span className="text-gray-300">SCAN</span>
+                    SNIPER<span className="text-gray-300">IQ</span>
                   </span>
                 </div>
                 <p className="text-sm text-gray-400 mb-3">
                   Institutional-grade financial analysis platform powered by 9 AI engines.
                 </p>
                 <p className="text-xs text-gray-500">
-                  A product of Eagle Digital Services Ltd
+                  A product of SniperIQ
                 </p>
               </div>
 
@@ -960,22 +946,22 @@ export default function LandingPage() {
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="https://app.finscan.uk/dashboard" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://app.sniperiq.ai/dashboard" className="text-gray-400 hover:text-white transition-colors">
                       Dashboard
                     </a>
                   </li>
                   <li>
-                    <a href="https://app.finscan.uk/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://app.sniperiq.ai/portfolio" className="text-gray-400 hover:text-white transition-colors">
                       Portfolio
                     </a>
                   </li>
                   <li>
-                    <a href="https://app.finscan.uk/research" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://app.sniperiq.ai" className="text-gray-400 hover:text-white transition-colors">
                       Research
                     </a>
                   </li>
                   <li>
-                    <a href="https://app.finscan.uk/settings" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://app.sniperiq.ai/settings" className="text-gray-400 hover:text-white transition-colors">
                       Settings
                     </a>
                   </li>
@@ -1039,11 +1025,9 @@ export default function LandingPage() {
             {/* Company Registration Info */}
             <div className="pt-8 border-t border-gray-900 mb-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs text-gray-600">
-                <p>Eagle Digital Services Ltd</p>
+                <p>SniperIQ</p>
                 <span className="hidden sm:inline">•</span>
-                <p>Company No. 16584009</p>
                 <span className="hidden sm:inline">•</span>
-                <p>Registered in England & Wales</p>
               </div>
               <p className="text-center text-xs text-gray-600 mt-2">
                 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
@@ -1052,18 +1036,16 @@ export default function LandingPage() {
 
             <div className="pt-6 border-t border-gray-900">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-                <p>© {new Date().getFullYear()} Eagle Digital Services Ltd. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} SniperIQ. All rights reserved.</p>
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://find-and-update.company-information.service.gov.uk/company/16584009"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-500 hover:text-gray-300 transition-colors text-xs underline"
                   >
-                    Companies House
                   </a>
                   <span>•</span>
-                  <span className="text-xs">finscan.uk</span>
+                  <span className="text-xs">sniperiq.ai</span>
                 </div>
               </div>
             </div>
