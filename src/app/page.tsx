@@ -746,7 +746,7 @@ export default function LandingPage() {
 
                 <div className="mb-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-gray-200">£49</span>
+                    <span className="text-5xl font-black text-gray-200">£39</span>
                     <span className="text-gray-400">/month</span>
                   </div>
                 </div>
@@ -786,13 +786,13 @@ export default function LandingPage() {
                 </div>
 
                 <div className="mb-8">
-                  <h3 className="text-2xl font-black mb-2 text-white">Professional</h3>
-                  <p className="text-sm text-gray-300">For research teams</p>
+                  <h3 className="text-2xl font-black mb-2 text-white">Pro</h3>
+                  <p className="text-sm text-gray-300">Professional Suite</p>
                 </div>
 
                 <div className="mb-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-white">£149</span>
+                    <span className="text-5xl font-black text-white">£99</span>
                     <span className="text-gray-300">/month</span>
                   </div>
                 </div>
@@ -837,7 +837,7 @@ export default function LandingPage() {
 
                 <div className="mb-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-gray-200">£299</span>
+                    <span className="text-5xl font-black text-gray-200">£199</span>
                     <span className="text-gray-400">/month</span>
                   </div>
                 </div>
