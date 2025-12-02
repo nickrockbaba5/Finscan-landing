@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { Brain, Mail, MessageSquare, ArrowLeft, Send } from 'lucide-react';
 import { useState } from 'react';
 
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.sniperiq.ai';
+const PUBLIC_API_KEY = process.env.NEXT_PUBLIC_API_KEY || '';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,10 +16,47 @@ export default function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement contact form submission
-    alert('Contact form submission coming soon!');
+
+    setStatus('sending');
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/support/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(PUBLIC_API_KEY ? { 'X-API-Key': PUBLIC_API_KEY } : {}),
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          source: 'landing-contact',
+          user_agent:
+            typeof window !== 'undefined'
+              ? window.navigator.userAgent
+              : undefined,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
+
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err: any) {
+      setStatus('error');
+      setErrorMessage(
+        err?.message || 'Something went wrong. Please try again.',
+      );
+    }
   };
 
   return (
@@ -31,7 +72,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <span className="text-xl font-black">
-                FIN<span className="text-gray-300">SCAN</span>
+                SNIPER<span className="text-gray-300">IQ</span>
               </span>
             </Link>
 
@@ -76,8 +117,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold mb-1">Email</h3>
-                    <a href="mailto:contact@finscan.uk" className="text-gray-400 hover:text-white transition-colors">
-                      contact@finscan.uk
+                    <a href="mailto:contact@sniperiq.ai" className="text-gray-400 hover:text-white transition-colors">
+                      contact@sniperiq.ai
                     </a>
                   </div>
                 </div>
@@ -151,7 +192,9 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     rows={5}
                     className="w-full px-4 py-3 bg-black border border-gray-800 rounded-lg focus:border-gray-500 focus:outline-none transition-colors resize-none"
                     placeholder="Your message..."
@@ -159,11 +202,25 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {status === 'success' && (
+                  <p className="text-sm text-emerald-400">
+                    Thank you – your message has been sent. We will get back to you as
+                    soon as possible.
+                  </p>
+                )}
+
+                {status === 'error' && errorMessage && (
+                  <p className="text-sm text-red-400">
+                    {errorMessage}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-gray-300 to-gray-500 text-black rounded-xl font-bold hover:shadow-2xl hover:shadow-gray-500/50 transition-all"
+                  disabled={status === 'sending'}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-gray-300 to-gray-500 text-black rounded-xl font-bold hover:shadow-2xl hover:shadow-gray-500/50 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
+                  <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
                   <Send className="w-5 h-5" />
                 </button>
               </form>

@@ -15,7 +15,9 @@ export default function TermsPage() {
                   <Brain className="w-5 h-5 text-gray-300" />
                 </div>
               </div>
-              <span className="text-xl font-black">FIN<span className="text-gray-300">SCAN</span></span>
+              <span className="text-xl font-black">
+                SNIPER<span className="text-gray-300">IQ</span>
+              </span>
             </Link>
             <Link href="/" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -46,12 +48,12 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
               <p className="text-gray-400 leading-relaxed">
-                These Terms of Service ("Terms") govern your access to and use of FinScan ("the Platform", "the Service"),
+                These Terms of Service ("Terms") govern your access to and use of SniperIQ ("the Platform", "the Service"),
                 an institutional-grade financial intelligence platform operated by Eagle Digital Services Ltd
                 ("we", "us", "our", "the Company"), a company registered in England and Wales under company number 16584009.
               </p>
               <p className="text-gray-400 leading-relaxed mt-4">
-                By accessing or using FinScan, you agree to be bound by these Terms. If you do not agree to these Terms,
+                By accessing or using SniperIQ, you agree to be bound by these Terms. If you do not agree to these Terms,
                 you must not access or use the Platform.
               </p>
             </section>
@@ -59,7 +61,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">2. Service Description</h2>
               <p className="text-gray-400 leading-relaxed">
-                FinScan is an AI-powered financial research and analysis platform that provides:
+                SniperIQ (formerly FinScan) is an AI-powered financial research and analysis platform that provides:
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4 mt-4">
                 <li>Institutional-grade market analysis using 9 specialized AI engines</li>
@@ -68,7 +70,7 @@ export default function TermsPage() {
                 <li>Multi-asset coverage including equities, forex, commodities, and cryptocurrencies</li>
               </ul>
               <p className="text-gray-400 leading-relaxed mt-4">
-                <strong className="text-white">Important:</strong> FinScan provides research and analysis tools only.
+                <strong className="text-white">Important:</strong> SniperIQ provides research and analysis tools only.
                 We do not provide financial advice, investment recommendations, or execute trades on your behalf.
               </p>
             </section>
@@ -99,7 +101,7 @@ export default function TermsPage() {
                   <strong className="text-red-400">IMPORTANT - PLEASE READ CAREFULLY:</strong>
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4 mt-4">
-                  <li>FinScan is a research tool and does NOT constitute financial advice</li>
+                  <li>SniperIQ is a research tool and does NOT constitute financial advice</li>
                   <li>Past performance is not indicative of future results</li>
                   <li>All trading and investment decisions are your sole responsibility</li>
                   <li>You may lose some or all of your invested capital</li>
@@ -137,7 +139,7 @@ export default function TermsPage() {
                 <li>Provide accurate and complete payment information</li>
               </ul>
               <p className="text-gray-400 leading-relaxed mt-4">
-                Refunds are provided in accordance with our refund policy. Contact support@finscan.uk for refund requests.
+                Refunds are provided in accordance with our refund policy. Contact support@sniperiq.ai for refund requests.
               </p>
             </section>
 
@@ -200,8 +202,8 @@ export default function TermsPage() {
                     <p>London, WC2H 9JQ</p>
                     <p>United Kingdom</p>
                     <p className="pt-2"><strong className="text-white">Company Number:</strong> 16584009</p>
-                    <p><strong className="text-white">Email:</strong> <a href="mailto:legal@finscan.uk" className="text-gray-200 underline hover:text-white">legal@finscan.uk</a></p>
-                    <p><strong className="text-white">Support:</strong> <a href="mailto:support@finscan.uk" className="text-gray-200 underline hover:text-white">support@finscan.uk</a></p>
+                    <p><strong className="text-white">Email:</strong> <a href="mailto:legal@sniperiq.ai" className="text-gray-200 underline hover:text-white">legal@sniperiq.ai</a></p>
+                    <p><strong className="text-white">Support:</strong> <a href="mailto:support@sniperiq.ai" className="text-gray-200 underline hover:text-white">support@sniperiq.ai</a></p>
                     <p className="pt-2">
                       <a
                         href="https://find-and-update.company-information.service.gov.uk/company/16584009"

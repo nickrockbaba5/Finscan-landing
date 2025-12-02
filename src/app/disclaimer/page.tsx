@@ -15,7 +15,9 @@ export default function DisclaimerPage() {
                   <Brain className="w-5 h-5 text-gray-300" />
                 </div>
               </div>
-              <span className="text-xl font-black">FIN<span className="text-gray-300">SCAN</span></span>
+              <span className="text-xl font-black">
+                SNIPER<span className="text-gray-300">IQ</span>
+              </span>
             </Link>
             <Link href="/" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -44,7 +46,7 @@ export default function DisclaimerPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">1. Not Financial Advice</h2>
               <p className="text-gray-400 leading-relaxed">
-                The information provided by FinScan is for informational and educational purposes only. It does not constitute financial, investment, trading, or other types of advice and should not be treated as such.
+                The information provided by SniperIQ is for informational and educational purposes only. It does not constitute financial, investment, trading, or other types of advice and should not be treated as such.
               </p>
             </section>
 
@@ -65,7 +67,7 @@ export default function DisclaimerPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">4. No Guarantees</h2>
               <p className="text-gray-400 leading-relaxed">
-                FinScan makes no representations or warranties concerning the accuracy, completeness, or timeliness of the information provided. While we strive for accuracy, the information may contain errors or inaccuracies.
+                SniperIQ makes no representations or warranties concerning the accuracy, completeness, or timeliness of the information provided. While we strive for accuracy, the information may contain errors or inaccuracies.
               </p>
             </section>
 
@@ -86,7 +88,7 @@ export default function DisclaimerPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">7. Regulatory Notice</h2>
               <p className="text-gray-400 leading-relaxed">
-                FinScan is not a registered investment advisor, broker-dealer, or exchange. We do not provide personalized investment recommendations or execute trades on behalf of users.
+                SniperIQ is not a registered investment advisor, broker-dealer, or exchange. We do not provide personalized investment recommendations or execute trades on behalf of users.
               </p>
             </section>
 
@@ -94,8 +96,8 @@ export default function DisclaimerPage() {
               <h2 className="text-2xl font-bold mb-4">8. Contact</h2>
               <p className="text-gray-400 leading-relaxed">
                 For questions about this disclaimer, contact us at{' '}
-                <a href="mailto:legal@finscan.uk" className="text-gray-300 hover:text-white underline">
-                  legal@finscan.uk
+                <a href="mailto:legal@sniperiq.ai" className="text-gray-300 hover:text-white underline">
+                  legal@sniperiq.ai
                 </a>
               </p>
             </section>
@@ -106,7 +108,7 @@ export default function DisclaimerPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
           </div>
         </div>
       </footer>

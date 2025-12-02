@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
+const ERROR_WEBHOOK_URL = process.env.NEXT_PUBLIC_ERROR_WEBHOOK_URL;
+const CRISP_WEBSITE_ID = process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID;
+
 export const metadata: Metadata = {
   // Basic Meta
   title: "SniperIQ - Institutional-Grade Financial Intelligence | AI-Powered Market Analysis",
@@ -173,6 +178,129 @@ export default function RootLayout({
             })
           }}
         />
+
+        {/* Google Analytics (optional, enabled when NEXT_PUBLIC_GA_MEASUREMENT_ID is set) */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
+                `,
+              }}
+            />
+          </>
+        )}
+
+        {/* Mixpanel behaviour tracking (optional, enabled when NEXT_PUBLIC_MIXPANEL_TOKEN is set) */}
+        {MIXPANEL_TOKEN && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(f,b){
+                  if(!b.__SV){
+                    var a,e,i,g;window.mixpanel=b;b._i=[];
+                    b.init=function(a,e,d){function f(b,h){
+                      var a=h.split(".");
+                      if(a.length==2){b=b[a[0]];h=a[1]}
+                      b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}
+                    }
+                    var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";
+                    c.people=c.people||[];
+                    c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);
+                      b||(a+=" (stub)");
+                      return a};
+                    c.people.toString=function(){return c.toString(1)+".people (stub)"};
+                    i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                    for(g=0;g<i.length;g++)f(c,i[g]);
+                    b._i.push([a,e,d])
+                  };
+                  b.__SV=1.2;
+                  a=f.createElement("script");
+                  a.type="text/javascript";
+                  a.async=!0;
+                  a.src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                  e=f.getElementsByTagName("script")[0];
+                  e.parentNode.insertBefore(a,e)
+                }})(document,window.mixpanel||[]);
+                window.mixpanel.init('${MIXPANEL_TOKEN}', { debug: false });
+                window.mixpanel.track('Page View', { path: window.location.pathname });
+              `,
+            }}
+          />
+        )}
+
+        {/* Lightweight error tracking hook (can forward to Sentry or custom webhook) */}
+        {ERROR_WEBHOOK_URL && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(){
+                  if (typeof window === 'undefined' || !window.addEventListener) return;
+                  function sendError(payload) {
+                    try {
+                      var url = '${ERROR_WEBHOOK_URL}';
+                      if (!url) return;
+                      var body = JSON.stringify(payload);
+                      if (navigator.sendBeacon) {
+                        navigator.sendBeacon(url, body);
+                      } else {
+                        fetch(url, {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: body
+                        });
+                      }
+                    } catch (e) {
+                      console.error('Error reporting failed', e);
+                    }
+                  }
+                  window.addEventListener('error', function(evt){
+                    sendError({
+                      type: 'error',
+                      message: evt.message,
+                      source: evt.filename,
+                      lineno: evt.lineno,
+                      colno: evt.colno
+                    });
+                  });
+                  window.addEventListener('unhandledrejection', function(evt){
+                    sendError({
+                      type: 'unhandledrejection',
+                      reason: evt.reason && (evt.reason.message || evt.reason.toString())
+                    });
+                  });
+                })();
+              `,
+            }}
+          />
+        )}
+
+        {/* Chat support (Crisp) - enabled when NEXT_PUBLIC_CRISP_WEBSITE_ID is set */}
+        {CRISP_WEBSITE_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.$crisp = [];
+                window.CRISP_WEBSITE_ID = '${CRISP_WEBSITE_ID}';
+                (function() {
+                  var d = document;
+                  var s = d.createElement("script");
+                  s.src = "https://client.crisp.chat/l.js";
+                  s.async = true;
+                  d.getElementsByTagName("head")[0].appendChild(s);
+                })();
+              `,
+            }}
+          />
+        )}
 
         {/* Organization Structured Data */}
         <script

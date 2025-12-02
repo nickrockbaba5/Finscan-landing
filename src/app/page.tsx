@@ -197,6 +197,7 @@ export default function LandingPage() {
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
                 <a href="#comparison" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Compare</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
+                <Link href="/help" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Help</Link>
               </nav>
 
               {/* CTA */}

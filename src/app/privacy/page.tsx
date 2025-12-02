@@ -15,7 +15,9 @@ export default function PrivacyPage() {
                   <Brain className="w-5 h-5 text-gray-300" />
                 </div>
               </div>
-              <span className="text-xl font-black">FIN<span className="text-gray-300">SCAN</span></span>
+              <span className="text-xl font-black">
+                SNIPER<span className="text-gray-300">IQ</span>
+              </span>
             </Link>
             <Link href="/" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -42,7 +44,7 @@ export default function PrivacyPage() {
               <strong>Data Controller:</strong> Eagle Digital Services Ltd<br />
               <strong>Company Number:</strong> 16584009<br />
               <strong>Registered Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br />
-              <strong>Contact:</strong> privacy@finscan.uk
+              <strong>Contact:</strong> privacy@sniperiq.ai
             </p>
           </div>
 
@@ -54,7 +56,7 @@ export default function PrivacyPage() {
                 1. Introduction
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Eagle Digital Services Ltd ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), trading as FinScan, is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
+                Eagle Digital Services Ltd ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), trading as SniperIQ (formerly FinScan), is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 This policy is issued in accordance with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).
@@ -280,7 +282,7 @@ export default function PrivacyPage() {
               </div>
 
               <p className="text-gray-300 leading-relaxed mb-4">
-                To exercise these rights, contact us at <a href="mailto:privacy@finscan.uk" className="text-gray-200 underline hover:text-white">privacy@finscan.uk</a>.
+                To exercise these rights, contact us at <a href="mailto:privacy@sniperiq.ai" className="text-gray-200 underline hover:text-white">privacy@sniperiq.ai</a>.
                 We will respond within one month of receipt of your request (extendable by two further months in complex cases).
               </p>
 
@@ -326,7 +328,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-3xl font-black mb-4">11. Children's Privacy</h2>
               <p className="text-gray-300 leading-relaxed">
-                Our Services are not intended for individuals under 18 years of age. We do not knowingly collect personal data from children. If you are a parent or guardian and believe your child has provided us with personal data, contact us immediately at <a href="mailto:privacy@finscan.uk" className="text-gray-200 underline hover:text-white">privacy@finscan.uk</a>, and we will delete such data.
+                Our Services are not intended for individuals under 18 years of age. We do not knowingly collect personal data from children. If you are a parent or guardian and believe your child has provided us with personal data, contact us immediately at <a href="mailto:privacy@sniperiq.ai" className="text-gray-200 underline hover:text-white">privacy@sniperiq.ai</a>, and we will delete such data.
               </p>
             </section>
 
@@ -348,7 +350,7 @@ export default function PrivacyPage() {
                 <div className="space-y-2 text-gray-300">
                   <p><strong className="text-white">Data Controller:</strong> Eagle Digital Services Ltd</p>
                   <p><strong className="text-white">Company Number:</strong> 16584009</p>
-                  <p><strong className="text-white">Email:</strong> <a href="mailto:privacy@finscan.uk" className="text-gray-200 underline hover:text-white">privacy@finscan.uk</a></p>
+                  <p><strong className="text-white">Email:</strong> <a href="mailto:privacy@sniperiq.ai" className="text-gray-200 underline hover:text-white">privacy@sniperiq.ai</a></p>
                   <p><strong className="text-white">Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
                   <p className="pt-2">
                     <a
