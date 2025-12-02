@@ -151,7 +151,6 @@ export default function RootLayout({
                   "addressCountry": "GB"
                 },
                 "sameAs": [
-                  "https://find-and-update.company-information.service.gov.uk/company/16584009",
                   "https://twitter.com/sniperiq",
                   "https://linkedin.com/company/sniperiq"
                 ]

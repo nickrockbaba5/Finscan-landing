@@ -204,16 +204,6 @@ export default function TermsPage() {
                     <p className="pt-2"><strong className="text-white">Company Number:</strong> 16584009</p>
                     <p><strong className="text-white">Email:</strong> <a href="mailto:legal@sniperiq.ai" className="text-gray-200 underline hover:text-white">legal@sniperiq.ai</a></p>
                     <p><strong className="text-white">Support:</strong> <a href="mailto:support@sniperiq.ai" className="text-gray-200 underline hover:text-white">support@sniperiq.ai</a></p>
-                    <p className="pt-2">
-                      <a
-                        href="https://find-and-update.company-information.service.gov.uk/company/16584009"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white underline text-sm"
-                      >
-                        View on Companies House →
-                      </a>
-                    </p>
                   </div>
                 </div>
               </div>

@@ -197,7 +197,6 @@ export default function LandingPage() {
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
                 <a href="#comparison" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Compare</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
-                <Link href="/help" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Help</Link>
               </nav>
 
               {/* CTA */}
@@ -1299,16 +1298,7 @@ export default function LandingPage() {
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
                 <p>© {new Date().getFullYear()} Eagle Digital Services Ltd. All rights reserved.</p>
                 <div className="flex items-center gap-4">
-                  <a
-                    href="https://find-and-update.company-information.service.gov.uk/company/16584009"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-300 transition-colors text-xs underline"
-                  >
-                    Companies House
-                  </a>
-                  <span>•</span>
-                    <span className="text-xs">sniperiq.ai</span>
+                  <span className="text-xs">Company No. 16584009 • Registered in England & Wales</span>
                 </div>
               </div>
             </div>

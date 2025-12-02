@@ -352,16 +352,6 @@ export default function PrivacyPage() {
                   <p><strong className="text-white">Company Number:</strong> 16584009</p>
                   <p><strong className="text-white">Email:</strong> <a href="mailto:privacy@sniperiq.ai" className="text-gray-200 underline hover:text-white">privacy@sniperiq.ai</a></p>
                   <p><strong className="text-white">Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
-                  <p className="pt-2">
-                    <a
-                      href="https://find-and-update.company-information.service.gov.uk/company/16584009"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white underline text-sm"
-                    >
-                      View on Companies House →
-                    </a>
-                  </p>
                 </div>
               </div>
             </section>
