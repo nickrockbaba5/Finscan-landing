@@ -1,9 +1,9 @@
 /**
- * FINSCAN Research API Client
+ * SniperIQ Research API Client
  * All research intelligence endpoints
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.finscan.uk';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.sniperiq.ai';
 
 export interface EquityIntelligence {
   symbol: string;

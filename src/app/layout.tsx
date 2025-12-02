@@ -4,8 +4,8 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   // Basic Meta
-  title: "FinScan - Institutional-Grade Financial Intelligence | AI-Powered Market Analysis",
-  description: "Advanced AI research platform combining 9 specialized engines for institutional-grade market analysis. Real-time data, professional tools, and AI-powered insights for precious metals, currencies, and digital assets.",
+  title: "SniperIQ - Institutional-Grade Financial Intelligence | AI-Powered Market Analysis",
+  description: "SniperIQ is an advanced AI research platform combining 9 specialized engines for institutional-grade market analysis. Real-time data, professional tools, and AI-powered insights for equities, indices, forex, crypto, and commodities.",
 
   // Keywords for SEO
   keywords: [
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://finscan.uk",
-    siteName: "FinScan",
-    title: "FinScan - Institutional-Grade Financial Intelligence",
-    description: "Advanced AI research platform combining 9 specialized engines for institutional-grade market analysis of precious metals, currencies, and digital assets.",
+    url: "https://sniperiq.ai",
+    siteName: "SniperIQ",
+    title: "SniperIQ - Institutional-Grade Financial Intelligence",
+    description: "Advanced AI research platform combining 9 specialized engines for institutional-grade market analysis across global markets.",
     images: [
       {
-        url: "https://finscan.uk/og-image.png",
+        url: "https://sniperiq.ai/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FinScan - Institutional Intelligence Platform",
+        alt: "SniperIQ - Institutional Intelligence Platform",
       },
     ],
   },
@@ -57,10 +57,10 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "FinScan - Institutional-Grade Financial Intelligence",
+    title: "SniperIQ - Institutional-Grade Financial Intelligence",
     description: "Advanced AI research platform with 9 specialized engines for institutional-grade market analysis.",
-    images: ["https://finscan.uk/twitter-image.png"],
-    creator: "@finscan",
+    images: ["https://sniperiq.ai/twitter-image.png"],
+    creator: "@sniperiq",
   },
 
   // Additional Meta
@@ -85,10 +85,10 @@ export const metadata: Metadata = {
 
   // Alternate languages (if you expand internationally)
   alternates: {
-    canonical: "https://finscan.uk",
+    canonical: "https://sniperiq.ai",
     languages: {
-      'en-GB': 'https://finscan.uk',
-      'en-US': 'https://finscan.uk',
+      'en-GB': 'https://sniperiq.ai',
+      'en-US': 'https://sniperiq.ai',
     },
   },
 
@@ -123,10 +123,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "FinScan",
+              "name": "SniperIQ",
               "applicationCategory": "FinanceApplication",
               "operatingSystem": "Web",
-              "description": "Institutional-grade financial intelligence platform powered by 9 specialized AI engines. Provides real-time market analysis for precious metals, currencies, and digital assets.",
+              "description": "Institutional-grade financial intelligence platform powered by 9 specialized AI engines. Provides real-time market analysis for global equities, indices, currencies, and digital assets.",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -142,8 +142,8 @@ export default function RootLayout({
               "creator": {
                 "@type": "Organization",
                 "name": "Eagle Digital Services Ltd",
-                "url": "https://finscan.uk",
-                "logo": "https://finscan.uk/logo.png",
+                "url": "https://sniperiq.ai",
+                "logo": "https://sniperiq.ai/logo.png",
                 "description": "UK-based technology company specializing in AI-powered financial intelligence platforms",
                 "address": {
                   "@type": "PostalAddress",
@@ -154,8 +154,8 @@ export default function RootLayout({
                 },
                 "sameAs": [
                   "https://find-and-update.company-information.service.gov.uk/company/16584009",
-                  "https://twitter.com/finscan",
-                  "https://linkedin.com/company/finscan"
+                  "https://twitter.com/sniperiq",
+                  "https://linkedin.com/company/sniperiq"
                 ]
               },
               "featureList": [
@@ -168,8 +168,8 @@ export default function RootLayout({
                 "Market regime detection",
                 "Professional trading tools"
               ],
-              "url": "https://finscan.uk",
-              "screenshot": "https://finscan.uk/screenshot.png"
+              "url": "https://sniperiq.ai",
+              "screenshot": "https://sniperiq.ai/screenshot.png"
             })
           }}
         />
@@ -183,8 +183,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Eagle Digital Services Ltd",
               "legalName": "Eagle Digital Services Ltd",
-              "url": "https://finscan.uk",
-              "logo": "https://finscan.uk/logo.png",
+              "url": "https://sniperiq.ai",
+              "logo": "https://sniperiq.ai/logo.png",
               "foundingDate": "2025",
               "description": "UK-based technology company specializing in AI-powered financial intelligence platforms. Creator of FinScan Terminal.",
               "taxID": "16584009",
@@ -199,7 +199,7 @@ export default function RootLayout({
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Support",
-                "email": "contact@finscan.uk",
+                "email": "contact@sniperiq.ai",
                 "availableLanguage": ["English"]
               },
               "sameAs": [
@@ -209,7 +209,7 @@ export default function RootLayout({
               ],
               "brand": {
                 "@type": "Brand",
-                "name": "FinScan",
+                "name": "SniperIQ",
                 "description": "Institutional-grade financial intelligence platform"
               }
             })
@@ -223,14 +223,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "FinScan - Institutional-Grade Financial Intelligence",
+              "name": "SniperIQ - Institutional-Grade Financial Intelligence",
               "description": "Advanced AI research platform combining 9 specialized engines for institutional-grade market analysis",
-              "url": "https://finscan.uk",
+              "url": "https://sniperiq.ai",
               "inLanguage": "en-GB",
               "isPartOf": {
                 "@type": "WebSite",
-                "name": "FinScan",
-                "url": "https://finscan.uk"
+                "name": "SniperIQ",
+                "url": "https://sniperiq.ai"
               },
               "about": {
                 "@type": "Thing",
