@@ -201,7 +201,7 @@ export default function LandingPage() {
 
               {/* CTA */}
               <Link
-                href="https://app.sniperiq.ai/register"
+                href="https://app.sniperiq.ai/dashboard"
                 className="group relative px-6 py-2.5 bg-gradient-to-r from-gray-200 to-gray-400 text-black rounded-xl font-bold text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-gray-500/50"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
