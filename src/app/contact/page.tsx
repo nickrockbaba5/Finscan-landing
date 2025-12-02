@@ -233,7 +233,7 @@ export default function ContactPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
           </div>
         </div>
       </footer>

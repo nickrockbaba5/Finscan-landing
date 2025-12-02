@@ -360,10 +360,10 @@ export default function AboutPage() {
             Ready to Trade with <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Institutional Intelligence</span>?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join professional traders worldwide using FinScan for advanced market analysis.
+            Join professional traders worldwide using SniperIQ for advanced market analysis.
           </p>
           <Link
-            href="https://app.finscan.uk"
+            href="https://app.sniperiq.ai"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-300 to-gray-500 text-black rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-gray-500/50 transition-all"
           >
             <span>Launch Research Terminal</span>
@@ -376,7 +376,7 @@ export default function AboutPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
             <p className="mt-2">
               <span className="text-amber-500 font-semibold">Risk Warning:</span> Trading involves significant risk. Past performance is not indicative of future results.
             </p>

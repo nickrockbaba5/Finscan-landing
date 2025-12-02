@@ -104,7 +104,7 @@
 
             <div className="pt-8 border-t border-gray-900">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-                <p>© {new Date().getFullYear()} FinScan. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} SniperIQ. All rights reserved.</p>
                 <p>Institutional Intelligence Platform</p>
               </div>
             </div>

@@ -61,7 +61,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4">2. Service Description</h2>
               <p className="text-gray-400 leading-relaxed">
-                SniperIQ (formerly FinScan) is an AI-powered financial research and analysis platform that provides:
+                SniperIQ is an AI-powered financial research and analysis platform that provides:
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4 mt-4">
                 <li>Institutional-grade market analysis using 9 specialized AI engines</li>

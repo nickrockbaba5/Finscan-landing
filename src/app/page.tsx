@@ -233,14 +233,9 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800/50 rounded-full mb-4 backdrop-blur-xl">
               <span className="text-xs text-gray-500">
                 A product of{' '}
-                <a
-                  href="https://find-and-update.company-information.service.gov.uk/company/16584009"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors underline"
-                >
+                <span className="text-gray-300">
                   Eagle Digital Services Ltd
-                </a>
+                </span>
               </span>
             </div>
 
@@ -251,7 +246,7 @@ export default function LandingPage() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
               </div>
               <span className="text-sm font-semibold text-gray-300">
-                UK-Based • Institutional Grade • Live at finscan.uk
+                UK-Based • Institutional Grade • SniperIQ Terminal
               </span>
             </div>
 
@@ -730,7 +725,7 @@ export default function LandingPage() {
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-black text-white mb-2">The Unified Institutional Terminal</h3>
                   <p className="text-gray-400">
-                    FinScan is the <span className="text-white font-semibold">only platform</span> that combines institutional trading intelligence (ICT, gamma, liquidity),
+                    SniperIQ is the <span className="text-white font-semibold">only platform</span> that combines institutional trading intelligence (ICT, gamma, liquidity),
                     company fundamentals (Fiscal.ai-level), and AI research copilot in a single, integrated terminal.
                     Stop switching between 5 different tools.
                   </p>
@@ -756,7 +751,7 @@ export default function LandingPage() {
                 Terminal Walkthrough
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light">
-                Watch how professional traders use FinScan for institutional-grade analysis
+                Watch how professional traders use SniperIQ for institutional-grade analysis
               </p>
             </div>
 
@@ -978,7 +973,7 @@ export default function LandingPage() {
               <Lightbulb className="w-12 h-12 text-amber-400 mx-auto mb-6" />
               <h3 className="text-3xl font-black text-white mb-4">Innovation at the Core</h3>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                We're not just another chart platform. FinScan is a <span className="text-white font-semibold">complete institutional research terminal</span> designed
+                We're not just another chart platform. SniperIQ is a <span className="text-white font-semibold">complete institutional research terminal</span> designed
                 from the ground up to give retail traders the same edge that hedge funds and prop firms have been using for years.
               </p>
             </div>

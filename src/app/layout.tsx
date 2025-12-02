@@ -97,13 +97,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // App links (for mobile apps if you build them)
-  // appleWebApp: {
-  //   capable: true,
-  //   title: "FinScan",
-  //   statusBarStyle: "black-translucent",
-  // },
-
   // Category
   category: "Finance",
 };
@@ -314,7 +307,7 @@ export default function RootLayout({
               "url": "https://sniperiq.ai",
               "logo": "https://sniperiq.ai/logo.png",
               "foundingDate": "2025",
-              "description": "UK-based technology company specializing in AI-powered financial intelligence platforms. Creator of FinScan Terminal.",
+              "description": "UK-based technology company specializing in AI-powered financial intelligence platforms.",
               "taxID": "16584009",
               "address": {
                 "@type": "PostalAddress",
@@ -331,9 +324,8 @@ export default function RootLayout({
                 "availableLanguage": ["English"]
               },
               "sameAs": [
-                "https://find-and-update.company-information.service.gov.uk/company/16584009",
-                "https://twitter.com/finscan",
-                "https://linkedin.com/company/finscan"
+                "https://twitter.com/sniperiq",
+                "https://linkedin.com/company/sniperiq"
               ],
               "brand": {
                 "@type": "Brand",

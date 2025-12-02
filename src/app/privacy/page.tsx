@@ -56,7 +56,7 @@ export default function PrivacyPage() {
                 1. Introduction
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Eagle Digital Services Ltd ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), trading as SniperIQ (formerly FinScan), is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
+                Eagle Digital Services Ltd ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>"), trading as SniperIQ, is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our financial analysis platform and services (the "<strong>Services</strong>").
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 This policy is issued in accordance with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).

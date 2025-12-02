@@ -21,7 +21,7 @@ export default function BlogPage() {
     },
     {
       title: 'Institutional Trading Strategies Explained',
-      excerpt: 'Discover the strategies used by institutional traders and how FinScan brings them to retail traders.',
+      excerpt: 'Discover the strategies used by institutional traders and how SniperIQ brings them to retail traders.',
       date: '2025-01-05',
       readTime: '6 min read',
       category: 'Education'
@@ -41,7 +41,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <span className="text-xl font-black">
-                FIN<span className="text-gray-300">SCAN</span>
+                SNIPER<span className="text-gray-300">IQ</span>
               </span>
             </Link>
 
@@ -60,10 +60,10 @@ export default function BlogPage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">
-            FinScan <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Blog</span>
+            SniperIQ <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">Blog</span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed">
-            Insights, analysis, and updates from the FinScan team.
+            Insights, analysis, and updates from the SniperIQ team.
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function BlogPage() {
       <footer className="border-t border-gray-900 bg-black py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 FinScan. All rights reserved.</p>
+            <p>© 2025 SniperIQ. All rights reserved.</p>
           </div>
         </div>
       </footer>
