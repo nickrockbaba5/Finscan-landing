@@ -14,7 +14,7 @@ export default function LandingPage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [liveStats, setLiveStats] = useState({
     analyses: 127543,
-    engines: 18,
+    engines: 9,
     accuracy: 94.2,
     uptime: 99.9
   });
@@ -78,7 +78,7 @@ export default function LandingPage() {
       displayName: 'Pro',
       price: { monthly: 99, yearly: 990 },
       description: 'Professional trading suite',
-      features: ['50 analyses/day', '100 AI queries/day', '50 exports/month', 'All 12 AI engines', 'Full fundamentals', 'Real-time data'],
+      features: ['50 analyses/day', '100 AI queries/day', '50 exports/month', 'All 9 AI engines', 'Full fundamentals', 'Real-time data'],
       cta: 'Start Free Trial',
       popular: true,
     },
@@ -87,7 +87,7 @@ export default function LandingPage() {
       displayName: 'Advanced',
       price: { monthly: 199, yearly: 1990 },
       description: 'Institutional-grade intelligence',
-      features: ['200 analyses/day', '500 AI queries/day', '200 exports/month', 'All 12 AI engines', 'Premium fundamentals', 'Real-time data + API access'],
+      features: ['200 analyses/day', '500 AI queries/day', '200 exports/month', 'All 9 AI engines', 'Premium fundamentals', 'Real-time data + API access'],
       cta: 'Start Free Trial',
       popular: false,
     },
@@ -96,7 +96,7 @@ export default function LandingPage() {
       displayName: 'Enterprise',
       price: { monthly: 0, yearly: 0 },
       description: 'Custom enterprise solutions',
-      features: ['Unlimited analyses', 'Unlimited AI queries', 'Unlimited exports', 'All 12 AI engines', 'Premium fundamentals', 'Real-time data', 'Dedicated support', 'White-label options'],
+      features: ['Unlimited analyses', 'Unlimited AI queries', 'Unlimited exports', 'All 9 AI engines', 'Premium fundamentals', 'Real-time data', 'Dedicated support', 'White-label options'],
       cta: 'Contact Sales',
       ctaLink: 'mailto:enterprise@sniperiq.ai?subject=SniperIQ%20Enterprise%20Plan',
       popular: false,
@@ -252,7 +252,7 @@ export default function LandingPage() {
 
             {/* Subheadline - Compact for mobile */}
             <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-              One platform powered by <span className="text-white font-semibold">18 AI engines</span>, comprehensive fundamentals, and real-time liquidity intelligence.
+              One platform powered by <span className="text-white font-semibold">9 AI engines</span>, comprehensive fundamentals, and real-time liquidity intelligence.
             </p>
 
             {/* CTAs - Mobile optimized */}
