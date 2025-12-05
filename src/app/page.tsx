@@ -5,7 +5,7 @@ import Link from 'next/link';
 import {
   Brain, Zap, TrendingUp, Shield, Activity, BarChart3, Globe, ArrowRight, Play,
   Sparkles, Cpu, Target, ChevronRight, Check, DollarSign, LineChart,
-  TrendingDown, Layers, FileText, MessageSquare, Lightbulb, Building2, Clock, Loader2
+  TrendingDown, Layers, FileText, MessageSquare, Lightbulb, Building2, Clock, Loader2, Percent
 } from 'lucide-react';
 import { redirectToCheckout, type TierName } from '../lib/stripe';
 
@@ -14,7 +14,7 @@ export default function LandingPage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [liveStats, setLiveStats] = useState({
     analyses: 127543,
-    engines: 9,
+    engines: 18,
     accuracy: 94.2,
     uptime: 99.9
   });
@@ -194,8 +194,8 @@ export default function LandingPage() {
               <nav className="hidden md:flex items-center gap-8">
                 <Link href="/screener" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Screener</Link>
                 <Link href="/research/AAPL" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Research</Link>
+                <a href="#engines" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Engines</a>
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
-                <a href="#comparison" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Compare</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
               </nav>
 
@@ -252,7 +252,7 @@ export default function LandingPage() {
 
             {/* Subheadline - Compact for mobile */}
             <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-              One platform powered by <span className="text-white font-semibold">9 AI engines</span>, comprehensive fundamentals, and real-time liquidity intelligence.
+              One platform powered by <span className="text-white font-semibold">18 AI engines</span>, comprehensive fundamentals, and real-time liquidity intelligence.
             </p>
 
             {/* CTAs - Mobile optimized */}
@@ -294,6 +294,252 @@ export default function LandingPage() {
                   <div className="absolute inset-0 rounded-2xl bg-gray-400/0 group-hover:bg-gray-400/10 transition-all duration-500 -z-10 blur-xl" />
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 18 AI ENGINES SHOWCASE SECTION */}
+        <section id="engines" className="py-32 px-6 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-500/[0.02] to-transparent" />
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full mb-6 backdrop-blur-xl">
+                <Cpu className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-semibold text-blue-300">
+                  18 Specialized AI Engines
+                </span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 tracking-tight text-white">
+                Powered by 18 AI Engines
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                Each engine is a specialized AI system trained on institutional-grade data. Working in concert to deliver unmatched trading and fundamental analysis.
+              </p>
+            </div>
+
+            {/* Engines Grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+              {[
+                {
+                  id: 1,
+                  name: 'Sniper Master',
+                  category: 'Trading Intelligence',
+                  description: 'ICT structure analysis with order blocks, FVG, and liquidity pool detection',
+                  icon: Target,
+                  color: 'blue',
+                  gradient: 'from-blue-600 to-blue-400'
+                },
+                {
+                  id: 2,
+                  name: 'Fusion Brain',
+                  category: 'Multi-Timeframe',
+                  description: 'Aggregates signals across 9 timeframes with adaptive weighting',
+                  icon: Brain,
+                  color: 'purple',
+                  gradient: 'from-purple-600 to-purple-400'
+                },
+                {
+                  id: 3,
+                  name: 'Gamma Vision',
+                  category: 'Options Flow',
+                  description: 'Real-time gamma exposure mapping and dealer hedging analysis',
+                  icon: Zap,
+                  color: 'amber',
+                  gradient: 'from-amber-600 to-amber-400'
+                },
+                {
+                  id: 4,
+                  name: 'Volume Footprint',
+                  category: 'Order Flow',
+                  description: 'Delta analysis, absorption patterns, and institutional buying pressure',
+                  icon: BarChart3,
+                  color: 'green',
+                  gradient: 'from-green-600 to-green-400'
+                },
+                {
+                  id: 5,
+                  name: 'Liquidity Hunter',
+                  category: 'Market Microstructure',
+                  description: 'Stop-loss cluster detection and liquidity sweep zones',
+                  icon: Activity,
+                  color: 'red',
+                  gradient: 'from-red-600 to-red-400'
+                },
+                {
+                  id: 6,
+                  name: 'Scenario Engine',
+                  category: 'Probability',
+                  description: 'Monte Carlo simulation for multi-path price projections',
+                  icon: TrendingUp,
+                  color: 'cyan',
+                  gradient: 'from-cyan-600 to-cyan-400'
+                },
+                {
+                  id: 7,
+                  name: 'Regime Detector',
+                  category: 'Machine Learning',
+                  description: 'Market phase classification: trending, ranging, volatile, or calm',
+                  icon: Sparkles,
+                  color: 'pink',
+                  gradient: 'from-pink-600 to-pink-400'
+                },
+                {
+                  id: 8,
+                  name: 'Macro Filter',
+                  category: 'Macroeconomic',
+                  description: 'FRED economic data integration with central bank policy tracker',
+                  icon: Globe,
+                  color: 'indigo',
+                  gradient: 'from-indigo-600 to-indigo-400'
+                },
+                {
+                  id: 9,
+                  name: 'Quality Score',
+                  category: 'Fundamental',
+                  description: 'Piotroski F-Score & Altman Z-Score for business quality assessment',
+                  icon: Shield,
+                  color: 'emerald',
+                  gradient: 'from-emerald-600 to-emerald-400'
+                },
+                {
+                  id: 10,
+                  name: 'DCF Valuation',
+                  category: 'Intrinsic Value',
+                  description: 'Quality-adjusted discounted cash flow with WACC optimization',
+                  icon: DollarSign,
+                  color: 'teal',
+                  gradient: 'from-teal-600 to-teal-400'
+                },
+                {
+                  id: 11,
+                  name: 'Ratio Benchmark',
+                  category: 'Comparative',
+                  description: '40+ financial ratios with industry percentile rankings',
+                  icon: Percent,
+                  color: 'orange',
+                  gradient: 'from-orange-600 to-orange-400'
+                },
+                {
+                  id: 12,
+                  name: 'Growth Analyzer',
+                  category: 'Growth Metrics',
+                  description: 'Revenue, earnings, and FCF growth tracking with sustainability scoring',
+                  icon: TrendingUp,
+                  color: 'lime',
+                  gradient: 'from-lime-600 to-lime-400'
+                },
+                {
+                  id: 13,
+                  name: 'Efficiency Scanner',
+                  category: 'Operations',
+                  description: 'Asset turnover, ROE, ROA, and capital efficiency metrics',
+                  icon: Cpu,
+                  color: 'violet',
+                  gradient: 'from-violet-600 to-violet-400'
+                },
+                {
+                  id: 14,
+                  name: 'Ownership Tracker',
+                  category: 'Institutional Flow',
+                  description: 'Institutional holder analysis and insider transaction monitoring',
+                  icon: Building2,
+                  color: 'rose',
+                  gradient: 'from-rose-600 to-rose-400'
+                },
+                {
+                  id: 15,
+                  name: 'Earnings Insight',
+                  category: 'Earnings Quality',
+                  description: 'EPS surprise analysis, guidance tracking, and estimate revisions',
+                  icon: LineChart,
+                  color: 'sky',
+                  gradient: 'from-sky-600 to-sky-400'
+                },
+                {
+                  id: 16,
+                  name: 'Sentiment AI',
+                  category: 'Market Sentiment',
+                  description: 'News sentiment analysis with institutional positioning indicators',
+                  icon: MessageSquare,
+                  color: 'fuchsia',
+                  gradient: 'from-fuchsia-600 to-fuchsia-400'
+                },
+                {
+                  id: 17,
+                  name: 'ETF Exposure',
+                  category: 'Fund Flow',
+                  description: 'Track which ETFs hold the stock and passive flow dynamics',
+                  icon: Layers,
+                  color: 'slate',
+                  gradient: 'from-slate-600 to-slate-400'
+                },
+                {
+                  id: 18,
+                  name: 'Research Copilot',
+                  category: 'AI Assistant',
+                  description: 'GPT-4 powered research assistant with real-time data integration',
+                  icon: Lightbulb,
+                  color: 'yellow',
+                  gradient: 'from-yellow-600 to-yellow-400'
+                }
+              ].map((engine, i) => {
+                const Icon = engine.icon;
+                return (
+                  <div
+                    key={engine.id}
+                    className="group relative p-6 bg-white/[0.02] backdrop-blur-xl border border-gray-800 rounded-xl hover:bg-white/[0.05] hover:border-gray-600 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+                    style={{
+                      animationDelay: `${i * 0.05}s`
+                    }}
+                  >
+                    {/* Engine Number Badge */}
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-white/[0.05] border border-gray-700 rounded-full flex items-center justify-center">
+                      <span className="text-xs font-bold text-gray-500">#{engine.id}</span>
+                    </div>
+
+                    {/* Icon */}
+                    <div className={`w-12 h-12 bg-gradient-to-br ${engine.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+
+                    {/* Engine Name */}
+                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-gray-200 transition-colors">
+                      {engine.name}
+                    </h3>
+
+                    {/* Category Badge */}
+                    <div className="inline-block mb-3">
+                      <span className={`text-xs font-medium px-2.5 py-1 bg-${engine.color}-500/10 text-${engine.color}-300 border border-${engine.color}-500/20 rounded-full`}>
+                        {engine.category}
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {engine.description}
+                    </p>
+
+                    {/* Hover Glow Effect */}
+                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${engine.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10 blur-xl`} />
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center mt-16">
+              <p className="text-gray-400 mb-6 text-lg">
+                All 18 engines work in real-time to power your trading decisions
+              </p>
+              <Link
+                href="https://app.sniperiq.ai/dashboard"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] group"
+              >
+                <span className="relative">Launch All Engines</span>
+                <ArrowRight className="w-5 h-5 relative group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
             </div>
           </div>
         </section>
