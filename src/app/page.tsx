@@ -572,13 +572,15 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                {/* Screenshot placeholder */}
-                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <LineChart className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
-                    <p className="text-gray-500 text-sm sm:text-base">Terminal Screenshot Here</p>
-                    <p className="text-gray-600 text-xs sm:text-sm">ICT Structure + Gamma + Liquidity Maps</p>
-                  </div>
+                {/* Dashboard Screenshot with Glassmorphism */}
+                <div className="mb-6 relative group overflow-hidden rounded-xl sm:rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/10" />
+                  <img
+                    src="/images/screenshots/dashboard-institutional.png"
+                    alt="Institutional Trade Intelligence Dashboard showing BEARISH signal for AAPL"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Features grid */}
@@ -628,13 +630,15 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                {/* Screenshot placeholder */}
-                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <FileText className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
-                    <p className="text-gray-500 text-sm sm:text-base">Fundamentals Page Screenshot</p>
-                    <p className="text-gray-600 text-xs sm:text-sm">Financial Statements + Key Metrics + Ratios</p>
-                  </div>
+                {/* Research Workspace Screenshot with Glassmorphism */}
+                <div className="mb-6 relative group overflow-hidden rounded-xl sm:rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl border border-white/10" />
+                  <img
+                    src="/images/screenshots/research-workspace.png"
+                    alt="Research Workspace showing AAPL financial statements and metrics"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Features grid */}
@@ -679,13 +683,15 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                {/* Screenshot placeholder */}
-                <div className="mb-6 h-48 sm:h-64 md:h-80 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-xl sm:rounded-2xl border border-gray-800 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <MessageSquare className="w-12 h-12 sm:w-16 sm:h-16 text-gray-600 mx-auto mb-2 sm:mb-3" />
-                    <p className="text-gray-500 text-sm sm:text-base">AI Chat Interface Screenshot</p>
-                    <p className="text-gray-600 text-xs sm:text-sm">Research Engine + Context-Aware Analysis</p>
-                  </div>
+                {/* Comparison Table Screenshot with Glassmorphism */}
+                <div className="mb-6 relative group overflow-hidden rounded-xl sm:rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 backdrop-blur-xl border border-white/10" />
+                  <img
+                    src="/images/screenshots/comparison-table.png"
+                    alt="SniperIQ vs Competitors Comparison showing institutional advantages"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Features grid */}
@@ -714,6 +720,33 @@ export default function LandingPage() {
                     Powered by GPT-4 + unified research context from ML, macro, fundamentals & scenarios
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LIVE PLATFORM PREVIEW SECTION */}
+        <section className="py-20 px-6 relative">
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-white">
+                See It In Action
+              </h2>
+              <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+                Real institutional intelligence at your fingertips
+              </p>
+            </div>
+
+            {/* Institutional Engine Screenshot with Enhanced Glassmorphism */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-700" />
+              <div className="relative overflow-hidden rounded-2xl border border-white/20 backdrop-blur-2xl bg-white/5">
+                <img
+                  src="/images/screenshots/institutional-engine.png"
+                  alt="Institutional Intelligence Engine breakdown showing detailed analysis"
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               </div>
             </div>
           </div>
