@@ -1,0 +1,18 @@
+# SniperIQ Terminal - Robots Configuration
+User-agent: *
+Allow: /
+Allow: /dashboard
+Allow: /research
+Allow: /portfolio
+Allow: /watchlist
+Allow: /news
+Allow: /economic
+Allow: /screener
+
+# Disallow authentication pages
+Disallow: /login
+Disallow: /register
+Disallow: /onboarding
+
+# Sitemap
+Sitemap: https://app.sniperiq.ai/sitemap.xml
