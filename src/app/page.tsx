@@ -58,48 +58,63 @@ export default function LandingPage() {
       name: 'free' as TierName,
       displayName: 'Free',
       price: { monthly: 0, yearly: 0 },
+      originalPrice: null,
+      pricePerDay: null,
       description: 'Get started free',
       features: ['3 analyses/day', '5 AI queries/day', '0 exports/month', '3 basic engines', 'Basic fundamentals', 'Delayed data'],
-      cta: 'Get Started',
+      cta: 'Get Started Free',
       ctaLink: 'https://app.sniperiq.ai/',
       popular: false,
+      badge: null,
     },
     {
       name: 'starter' as TierName,
       displayName: 'Starter',
       price: { monthly: 39, yearly: 390 },
+      originalPrice: { monthly: 49, yearly: 468 },
+      pricePerDay: { monthly: '£1.30', yearly: '£1.07' },
       description: 'Essential trading intelligence',
       features: ['10 analyses/day', '20 AI queries/day', '10 exports/month', '3 basic engines', 'Basic fundamentals', 'Delayed data'],
       cta: 'Start Free Trial',
       popular: false,
+      badge: 'SAVE £78/YEAR',
     },
     {
       name: 'pro' as TierName,
       displayName: 'Pro',
       price: { monthly: 99, yearly: 990 },
+      originalPrice: { monthly: 119, yearly: 1188 },
+      pricePerDay: { monthly: '£3.30', yearly: '£2.71' },
       description: 'Professional trading suite',
       features: ['50 analyses/day', '100 AI queries/day', '50 exports/month', 'All 9 AI engines', 'Full fundamentals', 'Real-time data'],
-      cta: 'Start Free Trial',
+      cta: 'Get 15 FREE Analysis Credits',
       popular: true,
+      badge: 'BEST VALUE - SAVE £198/YEAR',
     },
     {
       name: 'advanced' as TierName,
       displayName: 'Advanced',
       price: { monthly: 199, yearly: 1990 },
+      originalPrice: { monthly: 239, yearly: 2388 },
+      pricePerDay: { monthly: '£6.63', yearly: '£5.45' },
       description: 'Institutional-grade intelligence',
       features: ['200 analyses/day', '500 AI queries/day', '200 exports/month', 'All 9 AI engines', 'Premium fundamentals', 'Real-time data + API access'],
       cta: 'Start Free Trial',
       popular: false,
+      badge: 'SAVE £398/YEAR',
     },
     {
       name: 'enterprise' as TierName,
       displayName: 'Enterprise',
       price: { monthly: 0, yearly: 0 },
+      originalPrice: null,
+      pricePerDay: null,
       description: 'Custom enterprise solutions',
       features: ['Unlimited analyses', 'Unlimited AI queries', 'Unlimited exports', 'All 9 AI engines', 'Premium fundamentals', 'Real-time data', 'Dedicated support', 'White-label options'],
       cta: 'Contact Sales',
       ctaLink: 'mailto:enterprise@sniperiq.ai?subject=SniperIQ%20Enterprise%20Plan',
       popular: false,
+      badge: 'CUSTOM PRICING',
     },
   ];
 
@@ -821,10 +836,14 @@ export default function LandingPage() {
                         : 'bg-white/[0.02] border border-gray-800 hover:bg-white/[0.05] hover:border-gray-600'
                     }`}
                   >
-                    {/* Most Popular Badge */}
-                    {isPro && (
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-gray-300 to-gray-500 text-black text-xs font-black rounded-full uppercase tracking-wider">
-                        Most Popular
+                    {/* Badge - Popular or Savings */}
+                    {(isPro || tier.badge) && (
+                      <div className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 text-xs font-black rounded-full uppercase tracking-wider whitespace-nowrap ${
+                        isPro
+                          ? 'bg-gradient-to-r from-gray-300 to-gray-500 text-black'
+                          : 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white'
+                      }`}>
+                        {isPro ? 'Most Popular' : tier.badge}
                       </div>
                     )}
 
@@ -845,19 +864,43 @@ export default function LandingPage() {
                           <span className="text-3xl sm:text-4xl font-black text-gray-200">Custom</span>
                         </div>
                       ) : (
-                        <div className="flex items-baseline gap-2">
-                          <span className={`text-4xl sm:text-5xl font-black ${isPro ? 'text-white' : 'text-gray-200'}`}>
-                            £{price}
-                          </span>
-                          <span className={`text-sm ${isPro ? 'text-gray-300' : 'text-gray-400'}`}>
-                            {billingCycle === 'yearly' && tier.price.yearly > 0 ? '/mo (billed yearly)' : '/month'}
-                          </span>
-                        </div>
-                      )}
-                      {billingCycle === 'yearly' && tier.price.yearly > 0 && tier.name !== 'free' && (
-                        <p className="text-xs text-emerald-400 mt-1">
-                          £{tier.price.yearly}/year - Save £{(tier.price.monthly * 12 - tier.price.yearly)}
-                        </p>
+                        <>
+                          {/* Strikethrough Original Price */}
+                          {tier.originalPrice && tier.name !== 'free' && (
+                            <div className="flex items-baseline gap-2 mb-1">
+                              <span className="text-lg text-gray-500 line-through">
+                                £{billingCycle === 'yearly' ? (tier.originalPrice.yearly / 12).toFixed(0) : tier.originalPrice.monthly}
+                              </span>
+                              <span className="px-2 py-0.5 bg-red-500/20 text-red-400 text-xs font-bold rounded">
+                                {Math.round(((billingCycle === 'yearly' ? (tier.originalPrice.yearly / 12 - tier.price.yearly / 12) / (tier.originalPrice.yearly / 12) : (tier.originalPrice.monthly - tier.price.monthly) / tier.originalPrice.monthly) * 100))}% OFF
+                              </span>
+                            </div>
+                          )}
+
+                          {/* Current Price */}
+                          <div className="flex items-baseline gap-2">
+                            <span className={`text-4xl sm:text-5xl font-black ${isPro ? 'text-white' : 'text-gray-200'}`}>
+                              £{price}
+                            </span>
+                            <span className={`text-sm ${isPro ? 'text-gray-300' : 'text-gray-400'}`}>
+                              {billingCycle === 'yearly' && tier.price.yearly > 0 ? '/mo (billed yearly)' : '/month'}
+                            </span>
+                          </div>
+
+                          {/* Per-Day Cost */}
+                          {tier.pricePerDay && tier.name !== 'free' && (
+                            <p className="text-xs text-gray-400 mt-1">
+                              Only {billingCycle === 'yearly' ? tier.pricePerDay.yearly : tier.pricePerDay.monthly}/day
+                            </p>
+                          )}
+
+                          {/* Yearly Savings */}
+                          {billingCycle === 'yearly' && tier.price.yearly > 0 && tier.name !== 'free' && (
+                            <p className="text-xs text-emerald-400 mt-1 font-semibold">
+                              £{tier.price.yearly}/year - Save £{(tier.price.monthly * 12 - tier.price.yearly)}
+                            </p>
+                          )}
+                        </>
                       )}
                     </div>
 
@@ -908,14 +951,52 @@ export default function LandingPage() {
               })}
             </div>
 
-            {/* Pricing FAQ/Note */}
-            <div className="mt-12 sm:mt-16 text-center">
-              <p className="text-xs sm:text-sm text-gray-400">
-                All plans include a 14-day free trial. No credit card required. Cancel anytime.
-              </p>
-              <p className="text-xs sm:text-sm text-gray-500 mt-2">
-                * Yearly plans save you 17% compared to monthly billing
-              </p>
+            {/* Trust Signals & Scarcity */}
+            <div className="mt-12 sm:mt-16 space-y-6">
+              {/* Scarcity Messaging */}
+              <div className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 border border-amber-500/30 rounded-2xl max-w-2xl mx-auto">
+                <svg className="w-5 h-5 text-amber-400 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+                <p className="text-sm sm:text-base text-amber-300 font-semibold">
+                  <span className="text-amber-200 font-black">47 spots left</span> this month at current pricing • Price increases Jan 1st, 2026
+                </p>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center justify-center gap-6 px-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800 rounded-lg">
+                  <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs sm:text-sm text-gray-300 font-medium">256-bit SSL Encryption</span>
+                </div>
+
+                <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800 rounded-lg">
+                  <svg className="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs sm:text-sm text-gray-300 font-medium">FCA Compliant</span>
+                </div>
+
+                <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gray-800 rounded-lg">
+                  <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs sm:text-sm text-gray-300 font-medium">30-Day Money-Back Guarantee</span>
+                </div>
+              </div>
+
+              {/* Trust Text */}
+              <div className="text-center space-y-2">
+                <p className="text-xs sm:text-sm text-gray-400">
+                  All plans include a <span className="text-white font-semibold">14-day free trial</span>. No credit card required. Cancel anytime.
+                </p>
+                <p className="text-xs sm:text-sm text-gray-500">
+                  * Yearly plans save you 17% compared to monthly billing. Prices shown in GBP (£).
+                </p>
+              </div>
             </div>
           </div>
         </section>
