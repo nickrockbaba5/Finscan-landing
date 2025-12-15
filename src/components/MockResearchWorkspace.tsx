@@ -213,7 +213,9 @@ export default function MockResearchWorkspace() {
             <span className="text-gray-500">Market Cap: <span className="text-white">$2.78T</span></span>
             <span className="text-gray-500">Employees: <span className="text-white">164,000</span></span>
           </div>
-          <span className="text-gray-500">Data: FMP • Bloomberg • SEC Filings</span>
+          <span className="text-gray-500">
+            Data: multiple institutional-grade providers and regulatory filings
+          </span>
         </div>
       </div>
     </div>
