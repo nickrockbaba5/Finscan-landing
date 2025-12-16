@@ -22,38 +22,35 @@ export default function MockCopilot() {
 • AAPL ROE: 147% | MSFT ROE: 38%
 • AAPL Net Margin: 25% | MSFT: 34%
 
-🎯 **Verdict**: AAPL offers superior capital efficiency, MSFT has better growth trajectory. For value: AAPL. For growth: MSFT.`
+📋 **Summary**: AAPL demonstrates superior capital efficiency metrics, while MSFT shows stronger growth trajectory. Each has distinct characteristics.`
     },
     {
       question: "Explain the current gamma exposure on SPY",
-      response: `**SPY Gamma Analysis** 🎯
+      response: `**SPY Gamma Analysis**
 
-📍 **Key Gamma Levels**
-• Major Put Wall: $440 (-$2.8B gamma)
-• Major Call Wall: $460 (+$3.2B gamma)
-• Flip Point: $448 (dealer neutral)
+📍 **Key Gamma Levels Observed**
+• Major Put Positioning: $440 zone
+• Major Call Positioning: $460 zone
+• Dealer Neutral Zone: $448
 
-⚡ **Current Positioning**
-SPY at $452 → Above flip, dealers are **long gamma**
-This means: Volatility suppression, mean reversion
+⚡ **Current Market Context**
+SPY at $452 is above the neutral zone, indicating dealers are in a long gamma position historically associated with volatility compression.
 
-🔮 **Implication**: Expect range-bound price action between $448-$460 until OPEX.`
+📊 **Research Note**: Options market structure suggests range-bound conditions may persist until options expiration.`
     },
     {
-      question: "What's the ICT setup for NVDA today?",
-      response: `**NVDA ICT Analysis** 🎯
+      question: "What market structure is NVDA showing?",
+      response: `**NVDA Market Structure Analysis**
 
-🔍 **Smart Money Concepts**
-• Order Block: $875-880 (bullish OB from Nov 15)
-• Fair Value Gap: $890-895 (unfilled)
-• Liquidity Pool: $860 (stop hunt target)
+🔍 **Price Structure Observations**
+• Prior Demand Zone: $875-880 area
+• Unfilled Gap: $890-895 region
+• Liquidity Concentration: $860 level
 
 📊 **Current Context**
-Price swept Asian highs, now retracing to discount array. Watch for rejection at $880 OB for long entry.
+Price has moved above recent highs and is now retracing. The $880 area shows historical demand.
 
-✅ **Trade Setup**
-Entry: $878-882 | Stop: $868 | Target: $905
-R:R = 2.3:1`
+📋 **Research Note**: Multiple price zones of interest have been identified. Past price behaviour at these levels can inform research.`
     }
   ];
 
@@ -121,9 +118,9 @@ R:R = 2.3:1`
         <div className="flex flex-wrap gap-2">
           {[
             { icon: TrendingUp, label: 'Compare stocks' },
-            { icon: Target, label: 'ICT analysis' },
+            { icon: FileText, label: 'Market structure' },
             { icon: FileText, label: 'Generate report' },
-            { icon: Zap, label: 'Trade setup' },
+            { icon: Zap, label: 'Research summary' },
           ].map((action, i) => (
             <button
               key={i}
@@ -181,7 +178,7 @@ R:R = 2.3:1`
           <div className="flex items-center gap-3 p-3 bg-white/[0.03] border border-white/10 rounded-xl">
             <input
               type="text"
-              placeholder="Ask anything about markets, stocks, or trading..."
+              placeholder="Ask anything about markets, fundamentals, or research..."
               className="flex-1 bg-transparent text-sm text-white placeholder-gray-500 outline-none"
               readOnly
             />
@@ -194,7 +191,7 @@ R:R = 2.3:1`
         {/* Suggestions */}
         <div className="flex flex-wrap gap-2 text-xs">
           <span className="text-gray-500">Try:</span>
-          {['Explain gamma squeeze', 'Best value stocks', 'FOMC impact analysis'].map((suggestion, i) => (
+          {['Explain gamma exposure', 'Compare sector valuations', 'Economic calendar impact'].map((suggestion, i) => (
             <span
               key={i}
               className="px-2 py-1 bg-white/[0.02] border border-white/5 rounded text-gray-400 hover:text-white hover:border-amber-500/30 cursor-pointer transition-all"

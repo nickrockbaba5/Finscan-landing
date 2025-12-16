@@ -150,8 +150,8 @@ export default function MockResearchWorkspace() {
                   {animatedScore}
                 </span>
                 <span className="text-lg text-emerald-400 mb-1">/100</span>
-                <span className="px-2 py-0.5 bg-emerald-500/20 rounded text-xs text-emerald-300 font-bold mb-1">
-                  STRONG BUY
+                <span className="px-2 py-0.5 bg-cyan-500/20 rounded text-xs text-cyan-300 font-bold mb-1">
+                  HIGH QUALITY
                 </span>
               </div>
               <p className="text-xs text-gray-400 mt-2 leading-relaxed">
@@ -247,18 +247,18 @@ export default function MockResearchWorkspace() {
                 ))}
               </div>
 
-              {/* AI Fair Value */}
+              {/* Model Reference Level */}
               <div className="mt-2 p-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-lg border border-purple-500/20">
                 <div className="flex items-center gap-2">
                   <Brain className="w-4 h-4 text-purple-400" />
-                  <span className="text-xs font-bold text-white">AI Fair Value</span>
+                  <span className="text-xs font-bold text-white">Scenario Reference Level</span>
                 </div>
                 <div className="flex items-end gap-2 mt-1">
                   <span className="text-2xl font-black text-purple-400">$192.50</span>
-                  <span className="text-xs text-emerald-400 mb-1">+7.9% upside</span>
+                  <span className="text-xs text-gray-400 mb-1">model estimate</span>
                 </div>
                 <p className="text-[10px] text-gray-400 mt-1">
-                  DCF + Comparables + ML sentiment adjustment
+                  Based on DCF + Comparables analysis. Not a price objective.
                 </p>
               </div>
             </div>

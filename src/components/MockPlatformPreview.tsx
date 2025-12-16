@@ -11,19 +11,19 @@ export default function MockPlatformPreview() {
   const [livePrice, setLivePrice] = useState(178.42);
 
   const signals = [
-    { symbol: 'AAPL', direction: 'BEARISH', confidence: 87, price: 178.42, change: -1.29 },
-    { symbol: 'NVDA', direction: 'BULLISH', confidence: 92, price: 875.30, change: +2.45 },
-    { symbol: 'MSFT', direction: 'NEUTRAL', confidence: 65, price: 378.91, change: +0.34 },
-    { symbol: 'TSLA', direction: 'BEARISH', confidence: 78, price: 242.15, change: -3.21 },
+    { symbol: 'AAPL', direction: 'CAUTIOUS', confidence: 87, price: 178.42, change: -1.29 },
+    { symbol: 'NVDA', direction: 'CONSTRUCTIVE', confidence: 92, price: 875.30, change: +2.45 },
+    { symbol: 'MSFT', direction: 'MIXED', confidence: 65, price: 378.91, change: +0.34 },
+    { symbol: 'TSLA', direction: 'CAUTIOUS', confidence: 78, price: 242.15, change: -3.21 },
   ];
 
   const engines = [
-    { name: 'ICT Smart Money', status: 'active', signal: 'BEAR' },
-    { name: 'Gamma Exposure', status: 'active', signal: 'NEUT' },
-    { name: 'Volume Footprint', status: 'active', signal: 'BEAR' },
-    { name: 'ML Regime', status: 'active', signal: 'RISK' },
-    { name: 'Macro Filter', status: 'active', signal: 'HAWK' },
-    { name: 'Scenario Engine', status: 'processing', signal: '...' },
+    { name: 'Flow Analysis', status: 'active', signal: 'Distribution' },
+    { name: 'Gamma Research', status: 'active', signal: 'Balanced' },
+    { name: 'Volume Profile', status: 'active', signal: 'Weakness' },
+    { name: 'ML Regime', status: 'active', signal: 'Cautious' },
+    { name: 'Macro Context', status: 'active', signal: 'Restrictive' },
+    { name: 'Scenario Model', status: 'processing', signal: '...' },
   ];
 
   // Rotate signals
@@ -117,11 +117,12 @@ export default function MockPlatformPreview() {
                   <span className="text-xs text-gray-300">{engine.name}</span>
                 </div>
                 <span className={`text-xs font-bold ${
-                  engine.signal === 'BEAR' ? 'text-red-400' :
-                  engine.signal === 'BULL' ? 'text-green-400' :
-                  engine.signal === 'RISK' ? 'text-orange-400' :
-                  engine.signal === 'HAWK' ? 'text-purple-400' :
-                  engine.signal === '...' ? 'text-yellow-400' : 'text-gray-400'
+                  engine.signal === 'Distribution' ? 'text-orange-400' :
+                  engine.signal === 'Accumulation' ? 'text-teal-400' :
+                  engine.signal === 'Weakness' ? 'text-orange-400' :
+                  engine.signal === 'Cautious' ? 'text-amber-400' :
+                  engine.signal === 'Restrictive' ? 'text-purple-400' :
+                  engine.signal === '...' ? 'text-yellow-400' : 'text-slate-400'
                 }`}>
                   {engine.signal}
                 </span>
@@ -132,27 +133,27 @@ export default function MockPlatformPreview() {
 
         {/* Center Panel - Main Signal */}
         <div className="lg:col-span-6 space-y-4">
-          {/* Signal Card */}
+          {/* Analysis Card */}
           <div className={`p-6 rounded-2xl border backdrop-blur-xl transition-all duration-500 ${
-            currentSignal.direction === 'BEARISH'
-              ? 'bg-red-500/10 border-red-500/30'
-              : currentSignal.direction === 'BULLISH'
-              ? 'bg-green-500/10 border-green-500/30'
-              : 'bg-yellow-500/10 border-yellow-500/30'
+            currentSignal.direction === 'CAUTIOUS'
+              ? 'bg-orange-500/10 border-orange-500/30'
+              : currentSignal.direction === 'CONSTRUCTIVE'
+              ? 'bg-teal-500/10 border-teal-500/30'
+              : 'bg-slate-500/10 border-slate-500/30'
           }`}>
             <div className="flex items-start justify-between mb-4">
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-3xl font-black text-white">{currentSignal.symbol}</span>
                   <div className={`px-3 py-1 rounded-lg flex items-center gap-1 ${
-                    currentSignal.direction === 'BEARISH'
-                      ? 'bg-red-500/20 text-red-400'
-                      : currentSignal.direction === 'BULLISH'
-                      ? 'bg-green-500/20 text-green-400'
-                      : 'bg-yellow-500/20 text-yellow-400'
+                    currentSignal.direction === 'CAUTIOUS'
+                      ? 'bg-orange-500/20 text-orange-400'
+                      : currentSignal.direction === 'CONSTRUCTIVE'
+                      ? 'bg-teal-500/20 text-teal-400'
+                      : 'bg-slate-500/20 text-slate-400'
                   }`}>
-                    {currentSignal.direction === 'BEARISH' ? <TrendingDown className="w-4 h-4" /> :
-                     currentSignal.direction === 'BULLISH' ? <TrendingUp className="w-4 h-4" /> :
+                    {currentSignal.direction === 'CAUTIOUS' ? <Activity className="w-4 h-4" /> :
+                     currentSignal.direction === 'CONSTRUCTIVE' ? <Activity className="w-4 h-4" /> :
                      <Activity className="w-4 h-4" />}
                     <span className="text-sm font-bold">{currentSignal.direction}</span>
                   </div>
@@ -170,40 +171,36 @@ export default function MockPlatformPreview() {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-xs text-gray-400 mb-1">Confidence</div>
+                <div className="text-xs text-gray-400 mb-1">Model Alignment</div>
                 <div className="text-3xl font-black text-white">{currentSignal.confidence}%</div>
               </div>
             </div>
 
-            {/* Confidence Bar */}
+            {/* Session Position Bar */}
             <div className="h-2 bg-white/10 rounded-full overflow-hidden">
               <div
-                className={`h-full rounded-full transition-all duration-1000 ${
-                  currentSignal.direction === 'BEARISH' ? 'bg-gradient-to-r from-red-600 to-red-400' :
-                  currentSignal.direction === 'BULLISH' ? 'bg-gradient-to-r from-green-600 to-green-400' :
-                  'bg-gradient-to-r from-yellow-600 to-yellow-400'
-                }`}
+                className="h-full rounded-full transition-all duration-1000 bg-gradient-to-r from-slate-600 to-slate-400"
                 style={{ width: `${currentSignal.confidence}%` }}
               />
             </div>
           </div>
 
-          {/* FusionBrain Score */}
+          {/* Model Metrics */}
           <div className="grid grid-cols-3 gap-3">
             <div className="p-4 bg-white/[0.03] rounded-xl border border-white/10 text-center">
               <Brain className="w-5 h-5 text-purple-400 mx-auto mb-2" />
-              <div className="text-2xl font-black text-purple-400">72</div>
-              <div className="text-xs text-gray-500">FusionBrain</div>
+              <div className="text-2xl font-black text-purple-400">72%</div>
+              <div className="text-xs text-gray-500">Agreement</div>
             </div>
             <div className="p-4 bg-white/[0.03] rounded-xl border border-white/10 text-center">
-              <Target className="w-5 h-5 text-blue-400 mx-auto mb-2" />
+              <BarChart3 className="w-5 h-5 text-blue-400 mx-auto mb-2" />
               <div className="text-2xl font-black text-blue-400">$175</div>
-              <div className="text-xs text-gray-500">Target</div>
+              <div className="text-xs text-gray-500">Reference Level</div>
             </div>
             <div className="p-4 bg-white/[0.03] rounded-xl border border-white/10 text-center">
-              <Shield className="w-5 h-5 text-green-400 mx-auto mb-2" />
-              <div className="text-2xl font-black text-green-400">2.3x</div>
-              <div className="text-xs text-gray-500">Risk/Reward</div>
+              <Activity className="w-5 h-5 text-slate-400 mx-auto mb-2" />
+              <div className="text-2xl font-black text-slate-400">Moderate</div>
+              <div className="text-xs text-gray-500">Skew</div>
             </div>
           </div>
 
@@ -228,31 +225,25 @@ export default function MockPlatformPreview() {
           </div>
         </div>
 
-        {/* Right Panel - Alerts */}
+        {/* Right Panel - Market Observations */}
         <div className="lg:col-span-3 space-y-3">
           <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-            Live Alerts
+            Market Events
           </div>
           {[
-            { type: 'warning', text: 'Liquidity sweep at $179.80', time: '2m ago' },
-            { type: 'info', text: 'Gamma wall at $180', time: '5m ago' },
-            { type: 'success', text: 'OB touched at $178.20', time: '8m ago' },
-            { type: 'warning', text: 'Fed minutes in 2h', time: '15m ago' },
+            { type: 'info', text: 'Liquidity activity observed near $179.80', time: '2m ago' },
+            { type: 'info', text: 'Options positioning noted at $180', time: '5m ago' },
+            { type: 'info', text: 'Price interacted with prior demand zone', time: '8m ago' },
+            { type: 'info', text: 'Fed minutes scheduled in 2h', time: '15m ago' },
           ].map((alert, i) => (
             <div
               key={i}
-              className={`p-3 rounded-xl border ${
-                alert.type === 'warning' ? 'bg-yellow-500/10 border-yellow-500/20' :
-                alert.type === 'success' ? 'bg-green-500/10 border-green-500/20' :
-                'bg-blue-500/10 border-blue-500/20'
-              }`}
+              className="p-3 rounded-xl border bg-slate-500/10 border-slate-500/20"
             >
               <div className="flex items-start gap-2">
-                {alert.type === 'warning' ? <AlertTriangle className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> :
-                 alert.type === 'success' ? <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> :
-                 <Zap className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />}
+                <Activity className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
                 <div className="flex-1 min-w-0">
-                  <p className="text-xs text-gray-200 truncate">{alert.text}</p>
+                  <p className="text-xs text-gray-300 truncate">{alert.text}</p>
                   <span className="text-[10px] text-gray-500">{alert.time}</span>
                 </div>
               </div>
