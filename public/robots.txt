@@ -1,18 +1,10 @@
-# SniperIQ Terminal - Robots Configuration
+# SniperIQ main site (sniperiq.ai) robots configuration
+# This file controls crawling for the marketing site only.
+
 User-agent: *
 Allow: /
-Allow: /dashboard
-Allow: /research
-Allow: /portfolio
-Allow: /watchlist
-Allow: /news
-Allow: /economic
-Allow: /screener
 
-# Disallow authentication pages
-Disallow: /login
-Disallow: /register
-Disallow: /onboarding
+# Marketing pages live on sniperiq.ai.
+# The application lives on app.sniperiq.ai and has its own rules.
 
-# Sitemap
-Sitemap: https://app.sniperiq.ai/sitemap.xml
+Sitemap: https://sniperiq.ai/sitemap.xml

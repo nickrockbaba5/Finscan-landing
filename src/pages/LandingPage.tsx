@@ -12,6 +12,7 @@ import MockResearchWorkspace from '../components/MockResearchWorkspace';
 import MockCopilot from '../components/MockCopilot';
 import MockPlatformPreview from '../components/MockPlatformPreview';
 import TerminalWalkthrough from '../components/TerminalWalkthrough';
+import { SEO, PAGE_SEO, STRUCTURED_DATA } from '../components/SEO';
 
 export default function LandingPage() {
   const [scrollY, setScrollY] = useState(0);
@@ -158,6 +159,12 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Dynamic SEO Meta Tags */}
+      <SEO
+        {...PAGE_SEO.home}
+        structuredData={STRUCTURED_DATA.webApplication}
+      />
+
       {/* Premium Animated Background - Silver/Gray theme - Mobile Optimized */}
       <div className="fixed inset-0 z-0">
         {/* Silver gradient orbs with mouse parallax - Reduced blur on mobile */}
@@ -218,7 +225,7 @@ export default function LandingPage() {
               <nav className="hidden md:flex items-center gap-8">
                 <Link to="/screener" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Screener</Link>
                 <Link to="/research/AAPL" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Research</Link>
-                <a href="#engines" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Engines</a>
+                <Link to="/engines" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Engines</Link>
                 <a href="#modules" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Platform</a>
                 <a href="#pricing" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Pricing</a>
               </nav>
@@ -1394,6 +1401,11 @@ export default function LandingPage() {
                   <li>
                     <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                       About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/engines" className="text-gray-400 hover:text-white transition-colors">
+                      Engine Stack
                     </Link>
                   </li>
                   <li>
