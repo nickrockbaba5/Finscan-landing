@@ -1117,16 +1117,16 @@ export default function LandingPage() {
                         {row.finscan === 'partial' && <span className="text-amber-400 text-sm">Partial</span>}
                       </td>
                       <td className="p-6 text-center">
-                        {row.tv === true && <Check className="w-6 h-6 text-gray-600 mx-auto" />}
+                        {row.tv === true && <Check className="w-6 h-6 text-gray-400 mx-auto" />}
                         {row.tv === false && <span className="text-gray-700">—</span>}
-                        {row.tv === 'partial' && <span className="text-gray-600 text-sm">Partial</span>}
+                        {row.tv === 'partial' && <span className="text-gray-400 text-sm">Partial</span>}
                       </td>
                       <td className="p-6 text-center">
-                        {row.fiscal === true && <Check className="w-6 h-6 text-gray-600 mx-auto" />}
+                        {row.fiscal === true && <Check className="w-6 h-6 text-gray-400 mx-auto" />}
                         {row.fiscal === false && <span className="text-gray-700">—</span>}
                       </td>
                       <td className="p-6 text-center">
-                        {row.alpha === true && <Check className="w-6 h-6 text-gray-600 mx-auto" />}
+                        {row.alpha === true && <Check className="w-6 h-6 text-gray-400 mx-auto" />}
                         {row.alpha === false && <span className="text-gray-700">—</span>}
                       </td>
                     </tr>

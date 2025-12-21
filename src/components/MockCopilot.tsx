@@ -182,7 +182,11 @@ Price has moved above recent highs and is now retracing. The $880 area shows his
               className="flex-1 bg-transparent text-sm text-white placeholder-gray-500 outline-none"
               readOnly
             />
-            <button className="p-2 bg-amber-500 rounded-lg hover:bg-amber-600 transition-colors">
+            <button
+              type="button"
+              aria-label="Send research question (demo only)"
+              className="p-2 bg-amber-500 rounded-lg hover:bg-amber-600 transition-colors"
+            >
               <Send className="w-4 h-4 text-white" />
             </button>
           </div>

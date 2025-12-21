@@ -68,13 +68,17 @@ export default function ROICalculator() {
             {/* Hours per day */}
             <div>
               <div className="flex items-center justify-between mb-3">
-                <label className="text-sm font-semibold text-gray-300 flex items-center gap-2">
+                <label
+                  htmlFor="roi-hours-per-day"
+                  className="text-sm font-semibold text-gray-300 flex items-center gap-2"
+                >
                   <Clock className="w-4 h-4 text-emerald-400" />
                   Research time per day
                 </label>
                 <span className="text-2xl font-black text-white">{hoursPerDay}h</span>
               </div>
               <input
+                id="roi-hours-per-day"
                 type="range"
                 min="0.5"
                 max="8"
@@ -92,13 +96,17 @@ export default function ROICalculator() {
             {/* Hourly rate */}
             <div>
               <div className="flex items-center justify-between mb-3">
-                <label className="text-sm font-semibold text-gray-300 flex items-center gap-2">
+                <label
+                  htmlFor="roi-hourly-rate"
+                  className="text-sm font-semibold text-gray-300 flex items-center gap-2"
+                >
                   <DollarSign className="w-4 h-4 text-emerald-400" />
                   Your time value (£/hour)
                 </label>
                 <span className="text-2xl font-black text-white">£{hourlyRate}</span>
               </div>
               <input
+                id="roi-hourly-rate"
                 type="range"
                 min="10"
                 max="500"
@@ -116,13 +124,17 @@ export default function ROICalculator() {
             {/* Trading days */}
             <div>
               <div className="flex items-center justify-between mb-3">
-                <label className="text-sm font-semibold text-gray-300 flex items-center gap-2">
+                <label
+                  htmlFor="roi-trading-days"
+                  className="text-sm font-semibold text-gray-300 flex items-center gap-2"
+                >
                   <TrendingUp className="w-4 h-4 text-emerald-400" />
                   Trading days per year
                 </label>
                 <span className="text-2xl font-black text-white">{tradingDays}</span>
               </div>
               <input
+                id="roi-trading-days"
                 type="range"
                 min="50"
                 max="365"

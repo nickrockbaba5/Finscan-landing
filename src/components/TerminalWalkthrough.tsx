@@ -410,6 +410,8 @@ export default function TerminalWalkthrough() {
         {/* Left Controls */}
         <div className="flex items-center gap-2">
           <button
+            type="button"
+            aria-label={isPlaying ? 'Pause walkthrough animation' : 'Play walkthrough animation'}
             onClick={handlePlayPause}
             className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
           >
@@ -420,18 +422,24 @@ export default function TerminalWalkthrough() {
             )}
           </button>
           <button
+            type="button"
+            aria-label="Skip to next walkthrough step"
             onClick={handleSkip}
             className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
           >
             <SkipForward className="w-5 h-5 text-white" />
           </button>
           <button
+            type="button"
+            aria-label="Restart walkthrough from first step"
             onClick={handleRestart}
             className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
           >
             <RotateCcw className="w-5 h-5 text-white" />
           </button>
           <button
+            type="button"
+            aria-label={isMuted ? 'Unmute walkthrough audio' : 'Mute walkthrough audio'}
             onClick={() => setIsMuted((m) => !m)}
             className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
           >
@@ -510,7 +518,7 @@ export default function TerminalWalkthrough() {
             >
               <feature.icon className={`w-5 h-5 text-${feature.color}-400`} />
             </div>
-            <h4 className="text-sm font-bold text-white mb-1">{feature.title}</h4>
+            <h3 className="text-sm font-bold text-white mb-1">{feature.title}</h3>
             <p className="text-xs text-gray-400">{feature.desc}</p>
           </div>
         ))}

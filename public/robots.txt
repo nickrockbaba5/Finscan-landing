@@ -1,6 +1,15 @@
 # SniperIQ main site (sniperiq.ai) robots configuration
 # This file controls crawling for the marketing site only.
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: *
 Allow: /
 
