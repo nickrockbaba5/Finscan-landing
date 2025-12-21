@@ -204,6 +204,67 @@ export const STRUCTURED_DATA = {
     },
   },
 
+  website: {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'SniperIQ',
+    url: BASE_URL,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://app.sniperiq.ai/research?symbol={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  },
+
+  siteNavigation: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'SiteNavigationElement',
+        position: 1,
+        name: 'Dashboard',
+        url: 'https://app.sniperiq.ai/dashboard',
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 2,
+        name: 'Research',
+        url: 'https://app.sniperiq.ai/research',
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 3,
+        name: 'Screener',
+        url: 'https://app.sniperiq.ai/screener',
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 4,
+        name: 'Portfolio',
+        url: 'https://app.sniperiq.ai/portfolio',
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 5,
+        name: 'Pricing',
+        url: `${BASE_URL}/#pricing`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 6,
+        name: 'Engine Stack',
+        url: `${BASE_URL}/engines`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 7,
+        name: 'Contact',
+        url: `${BASE_URL}/contact`,
+      },
+    ],
+  },
+
   breadcrumb: (items: Array<{ name: string; url: string }>) => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

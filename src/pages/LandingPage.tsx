@@ -162,7 +162,12 @@ export default function LandingPage() {
       {/* Dynamic SEO Meta Tags */}
       <SEO
         {...PAGE_SEO.home}
-        structuredData={STRUCTURED_DATA.webApplication}
+        structuredData={[
+          STRUCTURED_DATA.organization,
+          STRUCTURED_DATA.webApplication,
+          STRUCTURED_DATA.website,
+          STRUCTURED_DATA.siteNavigation,
+        ]}
       />
 
       {/* Premium Animated Background - Silver/Gray theme - Mobile Optimized */}
