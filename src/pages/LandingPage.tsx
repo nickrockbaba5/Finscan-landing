@@ -217,9 +217,9 @@ export default function LandingPage() {
               {/* Logo */}
               <div className="flex items-center gap-3">
                 <img
-                  src="/logo-sniperiq.png"
+                  src="/favicon.svg"
                   alt="SniperIQ logo"
-                  className="w-9 h-9 rounded-xl shadow-lg shadow-gray-500/50 object-contain"
+                  className="w-9 h-9"
                 />
                 <span className="text-xl font-black tracking-tight">
                   SNIPER<span className="text-gray-300">IQ</span>
@@ -1354,9 +1354,9 @@ export default function LandingPage() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <img
-                    src="/logo-sniperiq.png"
+                    src="/favicon.svg"
                     alt="SniperIQ logo"
-                    className="w-9 h-9 rounded-xl shadow-lg shadow-gray-500/50 object-contain"
+                    className="w-9 h-9"
                   />
                   <span className="text-xl font-black">
                     SNIPER<span className="text-gray-300">IQ</span>
