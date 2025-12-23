@@ -216,11 +216,11 @@ export default function LandingPage() {
             <div className="flex items-center justify-between gap-3">
               {/* Logo */}
               <div className="flex items-center gap-3">
-                <div className="relative w-9 h-9 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl p-[1px] shadow-lg shadow-gray-500/50">
-                  <div className="w-full h-full bg-black rounded-xl flex items-center justify-center">
-                    <Brain className="w-5 h-5 text-gray-300" />
-                  </div>
-                </div>
+                <img
+                  src="/logo-sniperiq.png"
+                  alt="SniperIQ logo"
+                  className="w-9 h-9 rounded-xl shadow-lg shadow-gray-500/50 object-contain"
+                />
                 <span className="text-xl font-black tracking-tight">
                   SNIPER<span className="text-gray-300">IQ</span>
                 </span>
